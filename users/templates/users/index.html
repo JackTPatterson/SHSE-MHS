@@ -1,0 +1,209 @@
+{% extends 'users/base.html' %}
+
+{%block content%}
+
+
+    <section class='md:ml-10'>
+       
+        <center>
+            <div
+                class="lg:flex lg:justify-between lg:flex-wrap lg:overflow-hidden xl:max-w-screen-2xl lg:max-w-screen-lg md:px-10">
+
+                <div id='main-txt' class="sm:w-2/3 lg:w-1/2 xl:w-1/2 mx-10 sm:mx-0">
+                    <div class='lg:mt-80 sm:mt-40 mt-32 pt-10 text-center'>
+                        <h1 class=' xl:text-7xl text-5xl lg:text-left lg:mx-0 ld:mx-10'><strong>Welcome to the <br><span
+                                    class='text-blue1'>SHSE Math Honor Society</span></strong></h1>
+                    </div>
+                </div>
+
+                <div class="w-1/2 sm:w-full lg:w-1/2 xl:w-1/2">
+                    <img src='../../static/users/images/logo.png' id='main-img'>
+                </div>
+
+            </div>
+        </center>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class='mt-60'>
+        <h1 class='mx-auto text-center text-6xl'><strong>About</strong></h1>
+        <center><p class='md:mx-auto text-center md:max-w-3xl mx-3 sm:mx-20 md:mx-0 mt-4'>We are Smithtown East Math Honor Society, the largest club in High School East. We help the school and community through activities and events such as tutoring at the elementary, middle and high school levels.</p></center>
+        <center> <button id='forms-btn'
+            class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mt-3'
+            onclick="window.location.href='{% url 'about' %}'">
+            <p class='text-white font-semibold'>Learn More</p>
+        </button>
+    </center>
+    </div>
+    </section>
+    <section>
+        <div class='mt-60'>
+            <h1 class='mx-auto text-center text-6xl'><strong>MHS Inductees</strong></h1>
+            <p class='md:mx-auto text-center md:max-w-3xl mx-3 sm:mx-20 md:mx-0 mt-4'>For the 2021 MHS Induction Ceremony, both members inducted at the end of 2020 and members inducted in 2021 will be honored! A list of the inductees (separated by year of induction) is included below. Congratulations to each and everyone one of you!</p>
+            
+            <div class="flex flex-wrap mx-auto -mx-4 overflow-hidden max-w-5xl">
+
+                <div class="my-4 px-4 w-1/2 overflow-hidden">
+                    <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>2020</strong></h1>
+                    <div class='text-center'>
+                        <ul>
+                            <li>Sydney Anderson</li>
+                            <li>Simritha Bandaru</li>
+                            <li>Leigh Barratta</li>
+                            <li>Mackenzie Barrett</li>
+                            <li>Cailey Bobadilla</li>
+                            <li>Ethan Cain</li>
+                            <li>Bridget Campanelli</li>
+                            <li>Johnathon Chung</li>
+                            <li>Sofia Colucci</li>
+                            <li>Nicholas Conte</li>
+                            <li>Alayna Costa</li>
+                            <li>Cassandra Dawson</li>
+                            <li>Elizabeth DeFilippis</li>
+                            <li>Brandon Depka</li>
+                            <li>Emily Desmond</li>
+                            <li>Paige Doherty</li>
+                            <li>Lindsey Douglas</li>
+                            <li>Brian Dowling</li>
+                            <li>Zach Finger</li>
+                            <li>Jacquelyn Gorman</li>
+                            <li>Colin Hanley</li>
+                            <li>Sammy Hannwacker</li>
+                            <li>Ethan Hecht</li>
+                            <li>Justin Hippler</li>
+                            <li>Philip Impastato</li>
+                            <li>Emma Khan</li>
+                            <li>Alexander Khan</li>
+                            <li>Dan Kinahan</li>
+                            <li>Tyler King</li>
+                            <li>Taylor Koehler</li>
+                            <li>Srikar Konkanchi</li>
+                            <li>Bianca Kusko</li>
+                            <li>Julia Kusko</li>
+                            <li>Brandon Lam</li>
+                            <li>Anthony Laviola</li>
+                            <li>Spencer Lebit</li>
+                            <li>Vivianne Lee</li>
+                            <li>Parker Lehner</li>
+                            <li>Angelina Lent</li>
+                            <li>Andrew Levine</li>
+                            <li>Jack Lombardi</li>
+                            <li>Abhiram Marisetti</li>
+                            <li>Jack Marti</li>
+                            <li>Nikhil Mehta</li>
+                            <li>Samantha Micozzi</li>
+                            <li>Lexi Milburn</li>
+                            <li>Aman Mistry</li>
+                            <li>Amanda Moghadasi</li>
+                            <li>Kara Morales</li>
+                            <li>Tyler Murray</li>
+                            <li>Max Nadelson</li>
+                            <li>Matthew Nestor</li>
+                            <li>Matthew Neto</li>
+                            <li>Emma Ostermann</li>
+                            <li>Will Park</li>
+                            <li>Jaqueline Pedley</li>
+                            <li>Ryan Petrat</li>
+                            <li>Sean Popick</li>
+                            <li>Ashley Prevet</li>
+                            <li>Jenna Prevet</li>
+                            <li>Sofia Ragona</li>
+                            <li>Deven Ramchandran</li>
+                            <li>Srivaths Ravva</li>
+                            <li>Jordan Romano</li>
+                            <li>Noah Rosenblatt</li>
+                            <li>Antonio Sabatino</li>
+                            <li>Sarada Sakthivadivel</li>
+                            <li>Emily Schrier</li>
+                            <li>Sarah Schubel</li>
+                            <li>Ella Schwartz</li>
+                            <li>Jason Scmideler</li>
+                            <li>Dylan Serino</li>
+                            <li>Jacqueline Shaffer</li>
+                            <li>Maddy Signorile</li>
+                            <li>Jenna Sollecito</li>
+                            <li>Olga Suleymanova</li>
+                            <li>Connor Syrbe</li>
+                            <li>Genevieve Talento</li>
+                            <li>Alec Tehranian</li>
+                            <li>Jake Thomson</li>
+                            <li>Sarah Tufo</li>
+                            <li>Lorraine Valenzano</li>
+                            <li>Kerrick Wille</li>
+                            <li>Nethmi Withange</li>
+                            <li>Matthew Zodda</li>
+                            <li>Payton Zografakis</li>
+                        </ul>
+                    </div>
+                </div>
+              
+                <div class="my-4 px-4 w-1/2 overflow-hidden">
+                   <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>2021</strong></h1>
+            <div class='text-center'>
+                <ul>
+                    <li>Rebecca Albahae</li>
+                    <li>Jennifer Amzler</li>
+                    <li>Sophia Augier</li>
+                    <li>Charles Bassani</li>
+                    <li>James Bryceland</li>
+                    <li>Samantha Bryceland</li>
+                    <li>Tejas Chandra</li>
+                    <li>Peyton Cozine</li>
+                    <li>Emerson Cozine</li>
+                    <li>Joseph DiMino</li>
+                    <li>Andrew Epstein</li>
+                    <li>Nicole Fagan</li>
+                    <li>Natalie Farrell</li>
+                    <li>Olivia Farrell</li>
+                    <li>Caylee Fesinstine</li>
+                    <li>Gianna Festa</li>
+                    <li>Alexander Frankenberger</li>
+                    <li>Victoria Geyer</li>
+                    <li>Sophia Giglio</li>
+                    <li>Caileigh Harrigan</li>
+                    <li>Anthie Hionas</li>
+                    <li>Tula Hionas</li>
+                    <li>Elisha Kong</li>
+                    <li>Shruthi Kumar</li>
+                    <li>Sophia Lam</li>
+                    <li>Giovanna Lombardi</li>
+                    <li>Nicholas Londono</li>
+                    <li>Ryan McKee</li>
+                    <li>Chris Meyer</li>
+                    <li>Makenna Morton</li>
+                    <li>Vail Muller</li>
+                    <li>Lauren Muscarella</li>
+                    <li>Mattie Naples</li>
+                    <li>Shriya Patel</li>
+                    <li>Karsten Pergan</li>
+                    <li>Madison Pirreca</li>
+                    <li>Jaclyn Roach</li>
+                    <li>Talia Scheffer</li>
+                    <li>Ryan Seltzer</li>
+                    <li>Jessica Sucharski</li>
+                    <li>Luke Surrusco</li>
+                    <li>Morgan Tengalia</li>
+                    <li>Theodore Thompson</li>
+                    <li>Isabel Tomasino</li>
+                    <li>Jack Troise</li>
+                    <li>Anthony Valenzano</li>
+                    <li>Christine Wilkinson</li>
+                    <li>Corey Yorke</li>
+                    <li>Holy Mary Zaher</li>
+                    <li>Brian Zarnitz</li>
+                    <li>Jennifer Zhong</li>
+                </ul>
+            </div>
+                </div>
+              
+              </div>
+            
+            
+           
+        </div>
+    </section>
+
+  
+
+    {%endblock content%}

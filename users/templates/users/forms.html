@@ -1,0 +1,61 @@
+{% extends 'users/base.html' %}
+
+{%block content%}
+
+
+    <h1 class="text-6xl text-center mt-20"><strong>Forms</strong></h1>
+    <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>Documents</strong></h1>
+
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <div class="w-full lg:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 rounded-lg overflow-hidden ">
+
+                <div class="w-full font-bold text-2xl text-black px-6 pt-4 text-center ">
+                    Prospective Member Application Form
+                </div>
+                <p class='text-center mt-2'>Prospective Members Only</p>
+                <p class="text-black text-base sm:mx-10 mt-11 max-w-3xl pb-5 text-center">The document of the
+                    application form has been attached below. However, it must be completed and turned in on the Google
+                    Classroom assignment. Additionally, there will be a Google Form you must complete to confirm your
+                    application.</p>
+
+
+                <center> <button id='forms-btn'
+                        class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mt-2'
+                        onclick="window.location.href='https://shsemhs.files.wordpress.com/2020/09/prospective-member-application-google-docs.pdf'">
+                        <p class='text-white font-semibold'>Download</p>
+                    </button>
+                </center>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 rounded-lg overflow-hidden ">
+
+                <div class="w-full font-bold text-2xl text-black px-6 pt-4 text-center ">
+                    Code of Conduct:
+                </div>
+                <p class='text-center mt-2'>All Members</p>
+                <p class="text-black text-base sm:mx-10 mt-11 max-w-3xl pb-5 text-center">The document of the Code Of
+                    Conduct has been attached below. However, it must be completed and turned in on the Google Classroom
+                    assignment.
+                    <br>
+                    <br>
+                    <br>
+
+                </p>
+
+
+                <center> <button id='forms-btn'
+                        class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl'
+                        onclick="window.location.href='https://shsemhs.files.wordpress.com/2020/09/2020-2021-national-math-honor-society-code-of-conduct.pdf'">
+                        <p class='text-white font-semibold'>Download</p>
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>Mask Orders</strong></h1>
+    <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>Trunk or Treat/Drive-In Movie Volunteering Sign up</strong></h1>
+    <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>Responses</strong></h1>
+
+    {%endblock content%}
