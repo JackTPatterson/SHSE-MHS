@@ -1,53 +1,106 @@
 {% extends 'users/base.html' %}
 
 {%block content%}
+<div id="container" style="background-image:url(myimage.png)"></div>
+<section class='xl:max-w-screen-2xl lg:max-w-screen-lg mx-auto'>
+
+    <center>
+        <div class="lg:flex lg:justify-between lg:flex-wrap lg:overflow-hidden md:px-10">
+
+            <div id='main-txt' class="sm:w-2/3 lg:w-1/2 xl:w-1/2 mx-10 sm:mx-0">
+                <div class='lg:mt-80 sm:mt-20 mt-10 pt-10 text-center'>
+                    <h1 class=' xl:text-7xl text-5xl lg:text-left lg:mx-0 ld:mx-10 text-white'><strong>Welcome to the
+                            <br><span class='text-blue1'>SHSE Math Honor Society</span></strong></h1>
+                </div>
+            </div>
+
+            <div class="w-1/2 sm:w-full md:w-2/3 lg:w-1/2 xl:w-1/2">
+                <img src='../../static/users/images/logo.png' id='main-img'>
+            </div>
+
+        </div>
+    </center>
+    <div class='sub-btn sm:mt-10 md:mt-10 pb-20 lg:ml-10'>
+        <button class='transition bg-blue1 hover:bg-blue2 text-white py-2 pl-8 pr-6 rounded-full mt-3' onclick="">
+            <div class='flex'>
+                <p class='text-white font-semibold mr-3'>Scroll Down</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 13l-5 5m0 0l-5-5m5 5V6" />
+                </svg>
+            </div>
+        </button>
+    </div>
+    </div>
 
 
-    <section class='md:ml-10'>
-       
+    </div>
+
+</section>
+
+<section>
+    <div class='mt-60'>
+        <h1 class='mx-auto text-center text-6xl text-white'><strong>About</strong></h1>
         <center>
-            <div
-                class="lg:flex lg:justify-between lg:flex-wrap lg:overflow-hidden xl:max-w-screen-2xl lg:max-w-screen-lg md:px-10">
+            <p class='md:mx-auto text-center md:max-w-3xl mx-3 sm:mx-20 mt-4 text-white'>We are Smithtown East Math Honor Society,
+                the largest club in High School East. We help the school and community through activities and events
+                such as tutoring at the elementary, middle and high school levels.</p>
+            <div class="lg:flex justify-between flex-wrap mx-auto overflow-hidden max-w-6xl ">
+                <div class='mt-20'>
+                    <h1 class='text-white text-4xl font-semibold mb-10'>Mentors</h1>
+                    <ul>
 
-                <div id='main-txt' class="sm:w-2/3 lg:w-1/2 xl:w-1/2 mx-10 sm:mx-0">
-                    <div class='lg:mt-80 sm:mt-40 mt-32 pt-10 text-center'>
-                        <h1 class=' xl:text-7xl text-5xl lg:text-left lg:mx-0 ld:mx-10'><strong>Welcome to the <br><span
-                                    class='text-blue1'>SHSE Math Honor Society</span></strong></h1>
-                    </div>
+                        <li class='text-white'>Mrs. Boccio-McComb</li>
+                        <li class='text-white'>Mrs. Schoepflin</li>
+                        <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        </li>
+                    </ul>
                 </div>
+                <div class='bg-grey1 w-1 h-auto rounded-full mt-16 '></div>
+                <div class='mt-20'>
+                    <h1 class='text-white text-4xl font-semibold mb-10'>Officers</h1>
+                    <ul class='text-white'>
+                        <li>Presidents</li>
+                        <li> Isabela Londono & Dylan McCreesh</li>
+                        <li>Vice-President</li>
+                        <li>Brandon Locke</li>
+                        <li>Treasurer/Fundraising </li>
+                        <li>Emma McDevitt</li>
+                        <li>Secretary of Attendance: </li>
+                        <li>Prateeksha Garlapad</li>
+                        <li>Secretary of Outreach: </li>
+                        <li>Jessica Moylan</li>
+                        <li>STEAM Coordinator: </li>
+                        <li>Gianna Antonacci, Amna Hashmi, and Krishna Palempalli</li>
+                        <li>Middle School Tutoring Coordinators:</li>
+                        <li> Micheal Gannon and Emily Penna</li>
+                        <br>
+                        <br>
+                        <br>
 
-                <div class="w-1/2 sm:w-full lg:w-1/2 xl:w-1/2">
-                    <img src='../../static/users/images/logo.png' id='main-img'>
+
+                    </ul>
                 </div>
-
             </div>
         </center>
-        </div>
-        </div>
-    </section>
-    <section>
-        <div class='mt-60'>
-        <h1 class='mx-auto text-center text-6xl'><strong>About</strong></h1>
-        <center><p class='md:mx-auto text-center md:max-w-3xl mx-3 sm:mx-20 md:mx-0 mt-4'>We are Smithtown East Math Honor Society, the largest club in High School East. We help the school and community through activities and events such as tutoring at the elementary, middle and high school levels.</p></center>
-        <center> <button id='forms-btn'
-            class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mt-3'
-            onclick="window.location.href='{% url 'about' %}'">
-            <p class='text-white font-semibold'>Learn More</p>
-        </button>
-    </center>
-    </div>
-    </section>
-    <section>
-        <div class='mt-60'>
-            <h1 class='mx-auto text-center text-6xl'><strong>MHS Inductees</strong></h1>
-            <p class='md:mx-auto text-center md:max-w-3xl mx-3 sm:mx-20 md:mx-0 mt-4'>For the 2021 MHS Induction Ceremony, both members inducted at the end of 2020 and members inducted in 2021 will be honored! A list of the inductees (separated by year of induction) is included below. Congratulations to each and everyone one of you!</p>
-            
-            <div class="flex flex-wrap mx-auto -mx-4 overflow-hidden max-w-5xl">
 
-                <div class="my-4 px-4 w-1/2 overflow-hidden">
-                    <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>2020</strong></h1>
-                    <div class='text-center'>
-                        <ul>
+    </div>
+</section>
+<section>
+    <div class='mt-60'>
+        <h1 class='mx-auto text-center text-6xl text-white'><strong>MHS Inductees</strong></h1>
+        <center>
+            <p class='md:mx-auto text-center md:max-w-3xl mx-3 sm:mx-20 mt-4 text-white'>For the 2021 MHS Induction
+                Ceremony, both members inducted at the end of 2020 and members inducted in 2021 will be honored! A list
+                of the inductees (separated by year of induction) is included below. Congratulations to each and
+                everyone one of you!</p>
+            <div class="flex justify-between flex-wrap mx-auto overflow-hidden max-w-6xl">
+                <div class='mt-20 sm:ml-20'>
+                    <h1 class='text-white text-4xl font-semibold mb-10'>2020</h1>
+                    
+
+                        <ul class='text-white mb-20'>
                             <li>Sydney Anderson</li>
                             <li>Simritha Bandaru</li>
                             <li>Leigh Barratta</li>
@@ -134,76 +187,134 @@
                             <li>Nethmi Withange</li>
                             <li>Matthew Zodda</li>
                             <li>Payton Zografakis</li>
+                            
+                            
                         </ul>
-                    </div>
+                    
                 </div>
-              
-                <div class="my-4 px-4 w-1/2 overflow-hidden">
-                   <h1 class='mx-auto text-center text-4xl mt-10 mb-2'><strong>2021</strong></h1>
-            <div class='text-center'>
-                <ul>
-                    <li>Rebecca Albahae</li>
-                    <li>Jennifer Amzler</li>
-                    <li>Sophia Augier</li>
-                    <li>Charles Bassani</li>
-                    <li>James Bryceland</li>
-                    <li>Samantha Bryceland</li>
-                    <li>Tejas Chandra</li>
-                    <li>Peyton Cozine</li>
-                    <li>Emerson Cozine</li>
-                    <li>Joseph DiMino</li>
-                    <li>Andrew Epstein</li>
-                    <li>Nicole Fagan</li>
-                    <li>Natalie Farrell</li>
-                    <li>Olivia Farrell</li>
-                    <li>Caylee Fesinstine</li>
-                    <li>Gianna Festa</li>
-                    <li>Alexander Frankenberger</li>
-                    <li>Victoria Geyer</li>
-                    <li>Sophia Giglio</li>
-                    <li>Caileigh Harrigan</li>
-                    <li>Anthie Hionas</li>
-                    <li>Tula Hionas</li>
-                    <li>Elisha Kong</li>
-                    <li>Shruthi Kumar</li>
-                    <li>Sophia Lam</li>
-                    <li>Giovanna Lombardi</li>
-                    <li>Nicholas Londono</li>
-                    <li>Ryan McKee</li>
-                    <li>Chris Meyer</li>
-                    <li>Makenna Morton</li>
-                    <li>Vail Muller</li>
-                    <li>Lauren Muscarella</li>
-                    <li>Mattie Naples</li>
-                    <li>Shriya Patel</li>
-                    <li>Karsten Pergan</li>
-                    <li>Madison Pirreca</li>
-                    <li>Jaclyn Roach</li>
-                    <li>Talia Scheffer</li>
-                    <li>Ryan Seltzer</li>
-                    <li>Jessica Sucharski</li>
-                    <li>Luke Surrusco</li>
-                    <li>Morgan Tengalia</li>
-                    <li>Theodore Thompson</li>
-                    <li>Isabel Tomasino</li>
-                    <li>Jack Troise</li>
-                    <li>Anthony Valenzano</li>
-                    <li>Christine Wilkinson</li>
-                    <li>Corey Yorke</li>
-                    <li>Holy Mary Zaher</li>
-                    <li>Brian Zarnitz</li>
-                    <li>Jennifer Zhong</li>
-                </ul>
+                <div id='divider1' class='bg-grey1 w-1 h-auto rounded-full mt-16 '></div>
+                <div class='mt-20 sm:mr-20'>
+                    <h1 class='text-white text-4xl font-semibold mb-10'>2021</h1>
+                    <ul class='text-white'>
+                        <li>Rebecca Albahae</li>
+                        <li>Jennifer Amzler</li>
+                        <li>Sophia Augier</li>
+                        <li>Charles Bassani</li>
+                        <li>James Bryceland</li>
+                        <li>Samantha Bryceland</li>
+                        <li>Tejas Chandra</li>
+                        <li>Peyton Cozine</li>
+                        <li>Emerson Cozine</li>
+                        <li>Joseph DiMino</li>
+                        <li>Andrew Epstein</li>
+                        <li>Nicole Fagan</li>
+                        <li>Natalie Farrell</li>
+                        <li>Olivia Farrell</li>
+                        <li>Caylee Fesinstine</li>
+                        <li>Gianna Festa</li>
+                        <li>Alexander Frankenberger</li>
+                        <li>Victoria Geyer</li>
+                        <li>Sophia Giglio</li>
+                        <li>Caileigh Harrigan</li>
+                        <li>Anthie Hionas</li>
+                        <li>Tula Hionas</li>
+                        <li>Elisha Kong</li>
+                        <li>Shruthi Kumar</li>
+                        <li>Sophia Lam</li>
+                        <li>Giovanna Lombardi</li>
+                        <li>Nicholas Londono</li>
+                        <li>Ryan McKee</li>
+                        <li>Chris Meyer</li>
+                        <li>Makenna Morton</li>
+                        <li>Vail Muller</li>
+                        <li>Lauren Muscarella</li>
+                        <li>Mattie Naples</li>
+                        <li>Shriya Patel</li>
+                        <li>Karsten Pergan</li>
+                        <li>Madison Pirreca</li>
+                        <li>Jaclyn Roach</li>
+                        <li>Talia Scheffer</li>
+                        <li>Ryan Seltzer</li>
+                        <li>Jessica Sucharski</li>
+                        <li>Luke Surrusco</li>
+                        <li>Morgan Tengalia</li>
+                        <li>Theodore Thompson</li>
+                        <li>Isabel Tomasino</li>
+                        <li>Jack Troise</li>
+                        <li>Anthony Valenzano</li>
+                        <li>Christine Wilkinson</li>
+                        <li>Corey Yorke</li>
+                        <li>Holy Mary Zaher</li>
+                        <li>Brian Zarnitz</li>
+                        <li>Jennifer Zhong</li>
+                        
+                        <br>
+                        <br>
+                        <br>
+
+                    </ul>
+                </div>
             </div>
+        </center>
+
+    </div>
+</section>
+
+<div class='h-20'></div>
+
+<style>
+    body {
+        background-color: #272727;
+        
+
+    }
+</style>
+
+
+<!-- component -->
+<footer class="footer relative pt-1 border-b-2 border-blue-700"  style='background-color: #272727;'>
+    <div class="container mx-auto px-6 text-white" >
+
+        <div class="sm:flex sm:mt-8">
+            <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
+                <div class="flex flex-col">
+                    <span class="font-bold text-gray-700 uppercase mb-2">Navigate</span>
+                    <span class="my-2"><a href="{% url 'index' %}" class="text-blue-700  text-md hover:text-blue-500">Home</a></span>
+                    <span class="my-2"><a href="{% url 'forms' %}" class="text-blue-700  text-md hover:text-blue-500">Forms</a></span>
+                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">Announcements</a></span>
+                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">Important Dates</a></span>
+                    <span class="my-2"><a href="{% url 'signup' %}" class="text-blue-700  text-md hover:text-blue-500">Tutoring Sign Up</a></span>
+
                 </div>
-              
-              </div>
-            
-            
-           
+                <div class="flex flex-col">
+                    <span class="font-bold text-gray-700 uppercase md:mt-0 mb-2">Gallery</span>
+                    <span class="my-2"><a href="#" class="text-blue-700 text-md hover:text-blue-500">2016-2017</a></span>
+                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">2017-2018</a></span>
+                    <span class="my-2"><a href="#" class="text-blue-700 text-md hover:text-blue-500">2018-2019</a></span>
+                    
+                    
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-gray-700 uppercase md:mt-0 mb-2">Contact</span>
+                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">General Contact</a></span>
+                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">Technical Contact</a></span>
+                   
+                    
+
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    <div class="container mx-auto px-6">
+        <div class="mt-16 border-t-2 border-white flex flex-col items-center">
+            <div class="sm:w-2/3 text-center py-6">
+                <p class="text-sm text-blue-700 font-bold mb-2 text-white">
+                    © 2021 Smithtown High School East Math Honor Society
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-  
+{%endblock content%}
 
-    {%endblock content%}

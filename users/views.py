@@ -10,3 +10,15 @@ def about(request):
 
 def forms(request):
     return render(request, "users/forms.html")
+
+def signup(request):
+    return render(request, "users/signup.html")
+
+def contact(request):
+    return render(request, "users/contact.html")
+    
+def contactTechnical(request):
+    return render(request, "users/technical-contact.html")
+
+def contactGeneral(request):
+    return render(request, "users/general-contact.html")
