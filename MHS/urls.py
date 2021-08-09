@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from MHS import settings
 from users import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,16 +33,4 @@ urlpatterns = [
     path('announcements', views.Announcements.as_view(), name='announcements'),
     path('announcement/<int:announcementID>', views.editAnnouncements, name='editAnnouncements'),
     path('dashboard', views.dashboard, name='dashboard'),
-    
-
-
-
-
-
-
-
-
-
-
 ]
-
