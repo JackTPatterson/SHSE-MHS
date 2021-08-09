@@ -1,0 +1,93 @@
+<link rel="stylesheet" href='../../static/users/css/tailwind.css'>
+
+
+
+<h1 class="text-6xl text-center mt-24 text-white" ><strong>General Feedback</strong></h1>
+
+<!-- component -->
+<section class="container mx-auto p-6">
+    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+      <div class="w-full overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+              <th class="px-4 py-3">Name</th>
+              <th class="px-4 py-3">Email</th>
+              <th class="px-4 py-3">Message</th>
+              <th class="px-4 py-3">Date</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            {% for feedback in feedback %}
+            {% if not feedback.isTechnical %}
+            <tr class="text-gray-700">
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  
+                  <div>
+                    <p class="font-semibold text-black">{{feedback.first_name}} {{feedback.last_name}}</p>
+                    <p class="text-xs text-gray-600">{{feedback.person}}</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-ms font-semibold border">{{feedback.email}}</td>
+              <td class="px-4 py-3 text-xs border">
+                <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> {{feedback.message}} </span>
+              </td>
+              <td class="px-4 py-3 text-sm border">{{feedback.date}}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  
+<h1 class="text-6xl text-center mt-24 text-white" ><strong>Technical Feedback</strong></h1>
+
+<!-- component -->
+<section class="container mx-auto p-6">
+    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+      <div class="w-full overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+              <th class="px-4 py-3">Name</th>
+              <th class="px-4 py-3">Email</th>
+              <th class="px-4 py-3">Message</th>
+              <th class="px-4 py-3">Date</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            {% for feedback in feedback %}
+            {% if feedback.isTechnical %}
+            <tr class="text-gray-700">
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  
+                  <div>
+                    <p class="font-semibold text-black">{{feedback.first_name}} {{feedback.last_name}}</p>
+                    <p class="text-xs text-gray-600">{{feedback.person}}</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-ms font-semibold border">{{feedback.email}}</td>
+              <td class="px-4 py-3 text-xs border">
+                <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> {{feedback.message}} </span>
+              </td>
+              <td class="px-4 py-3 text-sm border">{{feedback.date}}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+

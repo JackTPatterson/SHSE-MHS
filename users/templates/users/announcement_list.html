@@ -1,0 +1,76 @@
+{% extends 'users/base.html' %}
+
+{%block content%}
+
+
+    <h1 class="text-6xl text-center mt-24 text-white"><strong>Posts</strong></h1>
+   <div class='mt-20'>
+    {% for a in announcements %}
+    <!-- component -->
+<!-- post card -->
+<!-- <div class="mx-auto flex bg-grey1 rounded-lg md:mx-auto max-w-md md:max-w-2xl ">
+    <div class="flex px-4 py-6">
+       <div class="">
+          <div class="flex items-center">
+             <h2 class="text-4xl font-semibold text-white -mt-1">{{a.title}}</h2>
+             <small class="text-sm text-white">{{a.date}}</small>
+          </div>
+          <p class="text-gray-700">Joined 12 SEP 2012. </p>
+
+          <p class="mt-3 text-gray-700 text-sm text-white">
+             {{a.message}}
+          </p>
+          
+       </div>
+    </div>
+ </div> -->
+ <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+    <main>
+       <div class="divide-y divide-gray-200">
+          
+          <ul class="divide-y divide-gray-200">
+             <li class="py-12">
+                <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+                   <dl>
+                      <dt class="sr-only text-white">Published on</dt>
+                      <dd class=" text-white text-base font-medium text-gray-500"><time dateTime="2021-07-29T12:00:00.000Z">{{a.date}}</time></dd>
+                   </dl>
+                   <div class="space-y-5 xl:col-span-3">
+                      <div class="space-y-6">
+                         <h2 class="text-2xl font-bold tracking-tight text-white">{{a.title}}</h2>
+                         <div class="prose max-w-none text-gray-500">
+                            <div class="prose max-w-none text-white">
+                               <p>{{a.message|linebreaks}}</p>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   
+                </article>
+                {% if user.is_authenticated %}
+                <button onclick='window.location.href=href="{% url 'editAnnouncements' a.announcementID %}"'  id='forms-btn' class='mt-10 transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
+                    <p class='text-white font-semibold' >Edit</p>
+                </button>
+                <button onclick='window.location.href=href="{% url 'editAnnouncements' a.announcementID %}"' style='background: red;' id='forms-btn' class='ml-5 mt-10 transition bg-red-500 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
+                  <p class='text-white font-semibold' >Delete</p>
+              </button>
+            {% endif %}
+             </li>
+             <hr class='bg-white'>
+
+             
+          </ul>
+       </div>
+ </div>
+ {% endfor %}
+
+
+    <style>
+        body{
+            background-color: #272727;
+        }
+    </style>
+
+    {% include "users/footer.html" %}
+
+    {%endblock content%}

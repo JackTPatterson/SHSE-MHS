@@ -21,7 +21,7 @@
         </div>
     </center>
     <div class='sub-btn sm:mt-10 md:mt-10 pb-20 lg:ml-10'>
-        <button class='transition bg-blue1 hover:bg-blue2 text-white py-2 pl-8 pr-6 rounded-full mt-3' onclick="">
+        <button id='scrollBtn' class='transition bg-blue1 hover:bg-blue2 text-white py-2 pl-8 pr-6 rounded-full mt-3'>
             <div class='flex'>
                 <p class='text-white font-semibold mr-3'>Scroll Down</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -39,7 +39,7 @@
 
 </section>
 
-<section>
+<section id='about'>
     <div class='mt-60'>
         <h1 class='mx-auto text-center text-6xl text-white'><strong>About</strong></h1>
         <center>
@@ -265,56 +265,16 @@
 <style>
     body {
         background-color: #272727;
-        
-
     }
 </style>
 
 
-<!-- component -->
-<footer class="footer relative pt-1 border-b-2 border-blue-700"  style='background-color: #272727;'>
-    <div class="container mx-auto px-6 text-white" >
 
-        <div class="sm:flex sm:mt-8">
-            <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
-                <div class="flex flex-col">
-                    <span class="font-bold text-gray-700 uppercase mb-2">Navigate</span>
-                    <span class="my-2"><a href="{% url 'index' %}" class="text-blue-700  text-md hover:text-blue-500">Home</a></span>
-                    <span class="my-2"><a href="{% url 'forms' %}" class="text-blue-700  text-md hover:text-blue-500">Forms</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">Announcements</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">Important Dates</a></span>
-                    <span class="my-2"><a href="{% url 'signup' %}" class="text-blue-700  text-md hover:text-blue-500">Tutoring Sign Up</a></span>
 
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-bold text-gray-700 uppercase md:mt-0 mb-2">Gallery</span>
-                    <span class="my-2"><a href="#" class="text-blue-700 text-md hover:text-blue-500">2016-2017</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">2017-2018</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700 text-md hover:text-blue-500">2018-2019</a></span>
-                    
-                    
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-bold text-gray-700 uppercase md:mt-0 mb-2">Contact</span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">General Contact</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">Technical Contact</a></span>
-                   
-                    
+{% include "users/footer.html" %}
 
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mx-auto px-6">
-        <div class="mt-16 border-t-2 border-white flex flex-col items-center">
-            <div class="sm:w-2/3 text-center py-6">
-                <p class="text-sm text-blue-700 font-bold mb-2 text-white">
-                    © 2021 Smithtown High School East Math Honor Society
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+
+
 
 {%endblock content%}
 

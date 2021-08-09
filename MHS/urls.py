@@ -21,12 +21,22 @@ from users import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('/about', views.about, name='about'),
-    path('/forms', views.forms, name='forms'),
-    path('/signup', views.signup, name='signup'),
-    path('/contact', views.contact, name='contact'),
-    path('/contact-technical', views.contactTechnical, name='contactTechnical'),
-    path('/contact-general', views.contactGeneral, name='contactGeneral'),
+    path('about', views.about, name='about'),
+    path('forms', views.forms, name='forms'),
+    path('signup', views.signup, name='signup'),
+    path('contact', views.contact, name='contact'),
+    path('contact-technical', views.contactTechnical, name='contactTechnical'),
+    path('contact-general', views.contactGeneral, name='contactGeneral'),
+    path('login', views.login, name='login'),
+    path('feedback', views.General.as_view(), name='feedback'),
+    path('announcements', views.Announcements.as_view(), name='announcements'),
+    path('announcement/<int:announcementID>', views.editAnnouncements, name='editAnnouncements'),
+    path('dashboard', views.dashboard, name='dashboard'),
+    
+
+
+
+
 
 
 
