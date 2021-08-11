@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('', views.index, name='index'),
     path('about', views.about, name='about'),
     path('forms', views.forms, name='forms'),
@@ -31,6 +32,15 @@ urlpatterns = [
     path('login', views.login, name='login'),
     path('feedback', views.General.as_view(), name='feedback'),
     path('announcements', views.Announcements.as_view(), name='announcements'),
+    path('announcements/new', views.addAnnouncements, name='newAnnouncements'),
+
     path('announcement/<int:announcementID>', views.editAnnouncements, name='editAnnouncements'),
-    path('dashboard', views.dashboard, name='dashboard'),
+    path('announcement/<int:announcementID>/delete', views.deleteAnnouncements.as_view(), name='deleteAnnouncements'),
+
+    path('dates', views.DatesList.as_view(), name='dates'),
+    path('date/new', views.addDates, name='newDate'),
+    path('date/<int:pk>', views.editDates, name='editDates'),
+    path('date/<int:pk>/delete', views.deleteDates.as_view(), name='deleteDate'),
+
+
 ]

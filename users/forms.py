@@ -1,5 +1,5 @@
 from django import forms
-from .models import Feedback, Announcement
+from .models import Feedback, Announcement, Dates
 
 
 GENERAL_REASON_CHOICES = [('Prospective Member', 'Prospective Member'),
@@ -19,7 +19,7 @@ class FeedbackForm(forms.ModelForm):
         }
     ))
 
-    last_name = forms.CharField(label='First Name', required=False, widget=forms.TextInput(
+    last_name = forms.CharField(label='Last Name', required=False, widget=forms.TextInput(
         attrs={
             'class': 'appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
 
@@ -34,7 +34,7 @@ class FeedbackForm(forms.ModelForm):
         }
     ))
 
-    message = forms.CharField(label='First Name', required=True, widget=forms.Textarea(
+    message = forms.CharField(label='Message', required=True, widget=forms.Textarea(
         attrs={
             'class': 'no-resize appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none  focus:border-gray-500 h-48 resize-none',
 
@@ -55,14 +55,14 @@ class FeedbackForm(forms.ModelForm):
 
 class AnnouncementForm(forms.ModelForm):
     
-    title = forms.CharField(required=True, label='First Name', widget=forms.TextInput(
+    title = forms.CharField(required=True, label='Title', widget=forms.TextInput(
         attrs={
             'class': 'appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
 
         }
     ))
 
-    message = forms.CharField(label='First Name', required=True, widget=forms.Textarea(
+    message = forms.CharField(label='Message', required=True, widget=forms.Textarea(
         attrs={
             'class': 'no-resize appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none  focus:border-gray-500 h-48 resize-none',
 
@@ -76,14 +76,14 @@ class AnnouncementForm(forms.ModelForm):
 
 class AnnouncementEditForm(forms.ModelForm):
     
-    title = forms.CharField(required=True, label='First Name', widget=forms.TextInput(
+    title = forms.CharField(required=True, label='Title', widget=forms.TextInput(
         attrs={
             'class': 'appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
             'id': 'title'
         }
     ))
 
-    message = forms.CharField(label='First Name', required=True, widget=forms.Textarea(
+    message = forms.CharField(label='Message', required=True, widget=forms.Textarea(
         attrs={
             'class': 'no-resize appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none  focus:border-gray-500 h-48 resize-none',
             'id': 'message'
@@ -94,3 +94,44 @@ class AnnouncementEditForm(forms.ModelForm):
     class Meta:
         model = Announcement
         fields = ('title', 'message')
+
+
+class DatesForm(forms.ModelForm):
+    
+    title = forms.CharField(required=True, label='Title', widget=forms.TextInput(
+        attrs={
+            'class': 'appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
+        }
+    ))
+
+    dates = forms.CharField(label='Dates', required=True, widget=forms.Textarea(
+        attrs={
+            'class': 'no-resize appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none  focus:border-gray-500 h-48 resize-none',
+            
+        }
+    ))
+
+
+    class Meta:
+        model = Dates
+        fields = ('title', 'dates')
+
+class DatesEditForm(forms.ModelForm):
+    
+    title = forms.CharField(required=True, label='Title', widget=forms.TextInput(
+        attrs={
+            'class': 'appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
+        }
+    ))
+
+    dates = forms.CharField(label='Dates', required=True, widget=forms.Textarea(
+        attrs={
+            'class': 'no-resize appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none  focus:border-gray-500 h-48 resize-none',
+            
+        }
+    ))
+
+
+    class Meta:
+        model = Dates
+        fields = ('title', 'dates')

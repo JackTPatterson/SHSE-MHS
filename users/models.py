@@ -21,6 +21,7 @@ class Feedback(models.Model):
     isTechnical = models.BooleanField(default=False)
 
     date = models.DateField(default=timezone.now)
+    wasSeen = models.BooleanField(default=False) 
 
     def __str__(self):
         return f'{self.first_name.capitalize()}' + ' ' + f'{self.last_name.capitalize()}' + ' ➜ ' + f'{self.person}'
@@ -35,3 +36,12 @@ class Announcement(models.Model):
 
     def __str__(self):
         return f'{self.title.capitalize()}'
+
+class Dates(models.Model):
+    
+    title = models.CharField(verbose_name="Title", max_length=254)
+    dates = models.TextField(verbose_name='Message', max_length=5000)
+    
+
+    def __str__(self):
+        return f'{self.title}'

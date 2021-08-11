@@ -9,6 +9,14 @@
     </center>
     </p>
 
+    {% if user.is_authenticated %}
+    <center> <button id='forms-btn'
+        class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mt-10 mb-36'
+        onclick="window.location.href='{% url 'feedback' %}'">
+        <p class='text-white font-semibold'>Go to Feedback</p>
+    </button>
+</center>
+    {% endif %}
 
     <style>
         body{
