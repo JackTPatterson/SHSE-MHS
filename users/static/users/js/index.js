@@ -58,7 +58,7 @@ var abt = document.getElementById('scrollBtn')
 
 abt.onclick = function () {
 	$('html, body').animate({
-		scrollTop: window.pageYOffset + document.getElementById('about').offsetTop - 100
+		scrollTop: window.pageYOffset + document.getElementById('about').offsetTop - 40
 	}, 1300);
 }
 

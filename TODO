@@ -1,5 +1,4 @@
 - Need resources:
-    -- Pictures for media pages
     -- Google forms
 
 - Talk about
@@ -10,3 +9,11 @@
     -- Custom forms instead of google forms
         -- Display data on site
         -- Recieve emails when any form is completed
+
+
+-- Add inductees to two separate pages
+-- Find places to add color
+-- Remove django secret key from settings
+-- Add hover and scroll effects
+-- Make home page pop more
+-- Create instructions for new owners (this can be done last)
