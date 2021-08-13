@@ -2,15 +2,15 @@
 
 
 
-<h1 class="text-6xl text-center mt-24 text-white" ><strong>General Feedback</strong></h1>
+<h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white mt-24 text-center">General Feedback</h2>
 
 <!-- component -->
-<section class="container mx-auto p-6">
-    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+<section  class="container mx-auto p-6">
+    <div  class="w-full mb-8 overflow-hidden rounded-lg">
       <div class="w-full overflow-x-auto">
-        <table class="w-full">
+        <table class="w-full bg-grey1">
           <thead>
-            <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+            <tr style='color: white;' class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase">
               <th class="px-4 py-3">Name</th>
               <th class="px-4 py-3">Email</th>
               <th class="px-4 py-3">Message</th>
@@ -20,8 +20,8 @@
           <tbody class="bg-white">
             {% for feedback in feedback %}
             {% if not feedback.isTechnical %}
-            <tr class="text-gray-700">
-              <td class="px-4 py-3 border">
+            <tr style='color: white;'>
+              <td  class="px-4 py-3">
                 <div class="flex items-center text-sm">
                   
                   <div>
@@ -30,11 +30,11 @@
                   </div>
                 </div>
               </td>
-              <td class="px-4 py-3 text-ms font-semibold border">{{feedback.email}}</td>
-              <td class="px-4 py-3 text-xs border">
+              <td class="px-4 py-3 text-ms font-semibold ">{{feedback.email}}</td>
+              <td class="px-4 py-3 text-xs ">
                 <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> {{feedback.message}} </span>
               </td>
-              <td class="px-4 py-3 text-sm border">{{feedback.date}}</td>
+              <td class="px-4 py-3 text-sm ">{{feedback.date}}</td>
             </tr>
             {% endif %}
             {% endfor %}
@@ -48,46 +48,52 @@
 
 
   
-<h1 class="text-6xl text-center mt-24 text-white" ><strong>Technical Feedback</strong></h1>
+<h1 style='color: white;' class="text-6xl text-center mt-24 text-white" ><strong>Technical Feedback</strong></h1>
 
 <!-- component -->
-<section class="container mx-auto p-6">
-    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
-      <div class="w-full overflow-x-auto">
-        <table class="w-full">
-          <thead>
-            <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
-              <th class="px-4 py-3">Name</th>
-              <th class="px-4 py-3">Email</th>
-              <th class="px-4 py-3">Message</th>
-              <th class="px-4 py-3">Date</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white">
-            {% for feedback in feedback %}
-            {% if feedback.isTechnical %}
-            <tr class="text-gray-700">
-              <td class="px-4 py-3 border">
-                <div class="flex items-center text-sm">
-                  
-                  <div>
-                    <p class="font-semibold text-black">{{feedback.first_name}} {{feedback.last_name}}</p>
-                    <p class="text-xs text-gray-600">{{feedback.person}}</p>
-                  </div>
+<section  class="container mx-auto p-6">
+  <div  class="w-full mb-8 overflow-hidden rounded-lg ">
+    <div class="w-full overflow-x-auto">
+      <table class="w-full bg-grey1">
+        <thead>
+          <tr style='color: white;' class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase">
+            <th class="px-4 py-3">Name</th>
+            <th class="px-4 py-3">Email</th>
+            <th class="px-4 py-3">Message</th>
+            <th class="px-4 py-3">Date</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          {% for feedback in feedback %}
+          {% if feedback.isTechnical %}
+          <tr style='color: white;'>
+            <td  class="px-4 py-3">
+              <div class="flex items-center text-sm">
+                
+                <div>
+                  <p class="font-semibold text-black">{{feedback.first_name}} {{feedback.last_name}}</p>
+                  <p class="text-xs text-gray-600">{{feedback.person}}</p>
                 </div>
-              </td>
-              <td class="px-4 py-3 text-ms font-semibold border">{{feedback.email}}</td>
-              <td class="px-4 py-3 text-xs border">
-                <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> {{feedback.message}} </span>
-              </td>
-              <td class="px-4 py-3 text-sm border">{{feedback.date}}</td>
-            </tr>
-            {% endif %}
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-ms font-semibold ">{{feedback.email}}</td>
+            <td class="px-4 py-3 text-xs ">
+              <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> {{feedback.message}} </span>
+            </td>
+            <td class="px-4 py-3 text-sm ">{{feedback.date}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
-  </section>
+  </div>
+</section>
   
 
+
+  <style>
+    body{
+        background-color: #272727;
+    }
+</style>

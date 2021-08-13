@@ -61,3 +61,4 @@ abt.onclick = function () {
 		scrollTop: window.pageYOffset + document.getElementById('about').offsetTop - 100
 	}, 1300);
 }
+
