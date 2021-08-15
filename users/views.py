@@ -107,7 +107,7 @@ def login(request):
 
             if user is not None:
                 dj_login(request, user)
-                return redirect('dashboard')
+                return redirect('announcements')
             else:
                 messages.info(request, 'Username OR password is incorrect')
 
@@ -120,7 +120,7 @@ class General(LoginRequiredMixin, ListView):
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
     model = Feedback
-    template_name = 'users/dashboard'  # ! This should not work but it does
+    template_name = 'users/feedback'  # ! This should not work but it does
     context_object_name = 'feedback'
     ordering = ['-date']
 
@@ -172,7 +172,8 @@ def editAnnouncements(request, announcementID):
                 obj = form.save(commit = False)
                 obj.announcementID = announcementID
                 obj.save()
-                redirect('dashboard')
+                return redirect('announcements')
+
 
 
     context = {
@@ -205,7 +206,7 @@ class deleteAnnouncements(DeleteView):
         return get_object_or_404(Announcement, announcementID=id_)
 
     def get_success_url(self):
-        return reverse('dashboard')
+        return reverse('announcements')
 
 
 class deleteDates(DeleteView):

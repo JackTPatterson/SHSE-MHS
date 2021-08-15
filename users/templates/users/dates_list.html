@@ -15,7 +15,7 @@
    <div class='mt-10'>
     {% for d in dates %}
 
- <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+ <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0" data-aos="smooth5" data-aos-easing="ease-in-out-cubic">
     <main>
        <div class="divide-y divide-gray-200">
           
@@ -36,15 +36,17 @@
                    
                 </article>
                 {% if user.is_authenticated %}
-                <button onclick='window.location.href=href="{% url 'editDates' d.pk %}"'  id='forms-btn' class='mt-10 transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
+                <div class='right-6 pb-10 absolute'>
+                <button  onclick='window.location.href=href="{% url 'editDates' d.pk %}"'  id='forms-btn' class='mt-10 transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
                     <p class='text-white font-semibold' >Edit</p>
                 </button>
                 <button onclick='window.location.href=href="{% url 'deleteDate' d.pk %}"' style='background: red;' id='forms-btn' class='ml-5 mt-10 transition bg-red-500 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
                   <p class='text-white font-semibold' >Delete</p>
               </button>
+              </div>
             {% endif %}
              </li>
-             <hr class='bg-white'>
+             <hr class='bg-white mt-14'>
 
              
           </ul>
