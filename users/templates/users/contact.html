@@ -6,19 +6,19 @@
     <div class="space-y-12 md:text-center">
         <div class="max-w-6xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
             <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white">Contact</h2>
-            <p class="text-xl text-white">For general contact about the team, meetings, events, tutoring, or most other topics, USE our <span class='text-blue2'>General Contact</span> form. <br>For issues with the website, tutoring signups, or anything related to that, please use the <span class='text-blue2'>Technical Support</span> form.</p>
+            <p data-aos="smooth" data-aos-easing="ease-in-out-cubic" class="text-xl text-white mt-5">For general contact about the team, meetings, events, tutoring, or most other topics, USE our <span class='text-blue2'>General Contact</span> form. <br>For issues with the website, tutoring signups, or anything related to that, please use the <span class='text-blue2'>Technical Support</span> form.</p>
         </div>
     </div>
 </div>
 
-<div class="container mx-auto flex flex-wrap pt-4 pb-12 max-w-2xl">
+<div class="container mx-auto flex flex-wrap pt-4 pb-12 max-w-2xl" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
     <div class="w-full lg:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
         <div class="flex-1 rounded-lg overflow-hidden ">
 
            
 
 
-            <center> <button id='forms-btn'
+            <center> <button id='forms-btn' 
                 class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mb-10 w-60'
                 onclick="window.location.href='{% url 'contactGeneral' %}'">
                 <p class='text-white font-semibold'>General Feedback</p>
@@ -45,7 +45,7 @@
    
 
     {% if user.is_authenticated %}
-    <center> <button id='forms-btn'
+    <center> <button id='forms-btn' data-aos="smooth" data-aos-easing="ease-in-out-cubic"
         class='transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-xl  mb-36'
         onclick="window.location.href='{% url 'feedback' %}'">
         <p class='text-white font-semibold'>Go to Feedback</p>

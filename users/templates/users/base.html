@@ -14,7 +14,8 @@
     <link rel='stylesheet' type='text/css' href='"../../../static/users/css/index.css'>
     <link rel='stylesheet' type='text/css' href="../../../static/users/css/tailwind.css">
     <link rel='stylesheet' type='text/css' href="../../../static/users/css/owl.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
 
     </link>
 
@@ -27,12 +28,12 @@
 
 </head>
 
-<body >
+<body class="hero-anime">	
     <div class="navigation-wrap bg-grey2 start-header start-style">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="navbar navbar-expand-md navbar-dark">
+                    <nav class="navbar navbar-expand-md navbar-dark my-2">
                         {% if user.is_authenticated %}
                         <a href="{% url 'index' %}" class="navbar-brand">SHSE Math Honor Society <sup class='text-blue2'>Admin</sup></a>
                         {% else %}
@@ -46,51 +47,34 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto py-4 py-md-0">
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4 ">
                                     <a class="nav-link" href="{% url 'index' %}">
                                         <p class='text-white'>Home</p>
                                     </a>
                                 </li>
 
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'forms' %}">
                                         <p class='text-white'>Forms</p>
                                     </a>
                                 </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'announcements' %}">
                                         <p class='text-white'>Announcements</p>
                                     </a>
                                 </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <p class='text-white'>Gallery</p>
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">
-                                            <p class='text-white'>2016-2017</p>
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <p class='text-white'>2017-2018</p>
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <p class='text-white'>2018-2019</p>
-                                        </a>
-
-                                    </div>
-                                </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                              
+                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'dates' %}">
                                         <p class='text-white'>Important Dates</p>
                                     </a>
                                 </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'signup' %}">
                                         <p class='text-white'>Tutoring Sign Up</p>
                                     </a>
                                 </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                <!-- <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4 active">
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                         aria-haspopup="true" aria-expanded="false">
                                         <p class='text-white' onclick='window.location.href="{% url 'contact' %}"'>
@@ -104,6 +88,11 @@
                                             <p class='text-white'>Technical Contact</p>
                                         </a>
                                     </div>
+                                </li> -->
+                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="{% url 'contact' %}">
+                                        <p class='text-white'>Contact</p>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -123,11 +112,14 @@
 
 
     {%block scripts%}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
 </script>
 
     <script src="../../../static/users/js/index.js"></script>
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
