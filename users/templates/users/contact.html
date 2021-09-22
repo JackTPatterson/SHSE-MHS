@@ -4,39 +4,42 @@
 
 <div class="max-w-7xl px-12 mx-auto text-center mt-24">
     <div class="space-y-12 md:text-center">
-        <div class="max-w-6xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
+        <div class="max-w-7xl mb-20 space-y-3 sm:mx-auto sm:space-y-4">
             <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white">Contact</h2>
             <p data-aos="smooth" data-aos-easing="ease-in-out-cubic" class="text-xl text-white mt-5">For general contact about the team, meetings, events, tutoring, or most other topics, USE our <span class='text-blue2'>General Contact</span> form. <br>For issues with the website, tutoring signups, or anything related to that, please use the <span class='text-blue2'>Technical Support</span> form.</p>
         </div>
     </div>
 </div>
 
-<div class="container mx-auto flex flex-wrap pt-4 pb-12 max-w-2xl" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-    <div class="w-full lg:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
-        <div class="flex-1 rounded-lg overflow-hidden ">
+<div class="container mx-auto flex flex-wrap pt-4 pb-12 max-w-3xl" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
+    <div class="w-full md:w-1/2 md:p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 rounded-lg overflow-hidden transform hover:scale-105 transition duration-500">
 
            
 
 
             <center> <button id='forms-btn' 
-                class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mb-10 w-60'
+                class='transition duration-500 hover:bg-blue1 border-blue1 border-3 text-white py-5 px-10 rounded-xl mb-10 w-72 w-80'
                 onclick="window.location.href='{% url 'contactGeneral' %}'">
-                <p class='text-white font-semibold'>General Feedback</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                <p class='text-white text-xl font-semibold'>‎‎‎‎‎‎ General Feedback </p>
+            
             </button>
         </center>
         </div>
     </div>
     
-    <div class="w-full lg:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
-        <div class="flex-1 rounded-lg overflow-hidden ">
-
-           
-
-
+    <div class="w-full md:w-1/2 py-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 rounded-lg overflow-hidden transform hover:scale-105 transition duration-500">
             <center> <button id='forms-btn'
-                class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mb-10 w-60'
+                class='transition duration-500 hover:bg-blue1 border-blue1 border-3 text-white py-5 px-10 rounded-xl mb-10 w-80'
                 onclick="window.location.href='{% url 'contactTechnical' %}'">
-                <p class='text-white font-semibold'>Technical Feedback</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                <p class='text-white text-xl font-semibold'>Technical Feedback</p>
             </button>
         </center>
         </div>
@@ -45,8 +48,8 @@
    
 
     {% if user.is_authenticated %}
-    <center> <button id='forms-btn' data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-        class='transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-xl  mb-36'
+    <center> <button id='forms-btn' 
+        class='transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mb-36'
         onclick="window.location.href='{% url 'feedback' %}'">
         <p class='text-white font-semibold'>Go to Feedback</p>
     </button>
@@ -55,7 +58,7 @@
 
     <style>
         body{
-            background-color: #272727;
+            background-color: #1f1f1f;
         }
     </style>
 

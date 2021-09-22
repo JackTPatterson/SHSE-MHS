@@ -25,6 +25,9 @@ class Feedback(models.Model):
 
     def __str__(self):
         return f'{self.first_name.capitalize()}' + ' ' + f'{self.last_name.capitalize()}' + ' ➜ ' + f'{self.person}'
+    
+    class Meta:
+         verbose_name = "Feedback"
 
 
 class Announcement(models.Model):
@@ -37,6 +40,9 @@ class Announcement(models.Model):
     def __str__(self):
         return f'{self.title.capitalize()}'
 
+    class Meta:
+         verbose_name = "Announcement"
+
 class Dates(models.Model):
     
     title = models.CharField(verbose_name="Title", max_length=254)
@@ -45,3 +51,19 @@ class Dates(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+
+    class Meta:
+         verbose_name = "Dates"
+
+class Inductees(models.Model):
+    
+    year = models.IntegerField(verbose_name="Year")
+    inductees = models.TextField(verbose_name='Message', max_length=2000)
+    hide = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'{self.year}'
+
+    class Meta:
+         verbose_name = "Inductee"
+

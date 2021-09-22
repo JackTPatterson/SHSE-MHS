@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.shortcuts import render
 from django.urls import path
 from MHS import settings
 from users import views
-from django.conf.urls.static import static
+from django.template import RequestContext
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,5 +43,11 @@ urlpatterns = [
     path('date/<int:pk>', views.editDates, name='editDates'),
     path('date/<int:pk>/delete', views.deleteDates.as_view(), name='deleteDate'),
 
+    path('inductees', views.InducteesList.as_view(), name='inductees'),
+    path('inductees/new', views.addInductees, name='newInductees'),
+    path('inductees/<int:pk>', views.editInductees, name='editInductees'),
+
 
 ]
+
+handler404 = "users.views.page_not_found_view"

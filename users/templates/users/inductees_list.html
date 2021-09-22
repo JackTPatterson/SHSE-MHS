@@ -1,0 +1,105 @@
+{% extends 'users/base.html' %}
+
+{%block content%}
+
+
+<h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white mt-28 text-center">Inductees</h2>
+{% if user.is_authenticated %}
+<center> <button id='forms-btn' class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mt-10'
+      onclick="window.location.href='{% url 'newInductees' %}'">
+      <p class='text-white font-semibold'>Add Inductees</p>
+   </button>
+</center>
+{% endif %}
+<div class='mt-10'>
+   {% for a in inductees %}
+   {% if user.is_authenticated %}
+   <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
+      <main>
+         <div class="divide-y divide-gray-200">
+
+            <ul class="divide-y divide-gray-200">
+               <li class="py-12">
+                  <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+                     
+                     <div class="space-y-5 xl:col-span-3">
+                        <div class="space-y-6">
+                           <h2 class="text-4xl font-bold tracking-tight text-white">{{a.year}}</h2>
+                           <div class="prose max-w-none text-gray-500">
+                              <div class="prose max-w-none text-white">
+                                 <p>{{a.inductees|linebreaks}}</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </article>
+                  {% if user.is_authenticated %}
+                  <div class='right-6  pb-10 absolute'>
+                  <button onclick='window.location.href=href="{% url 'editInductees' a.pk %}"'
+                     id='forms-btn' class='mt-10 transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
+                     <p class='text-white font-semibold'>Edit</p>
+                  </button>
+                 
+                  {% endif %}
+               </li>
+               </ul>
+               <hr class='bg-white mt-14'>
+
+
+            </ul>
+         </div>
+   </div>
+                  {% endif %}
+
+                  {% if not user.is_authenticated and not a.hide %}
+   <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
+      <main>
+         <div class="divide-y divide-gray-200">
+
+            <ul class="divide-y divide-gray-200">
+               <li class="py-12">
+                  <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+                     
+                     <div class="space-y-5 xl:col-span-3">
+                        <div class="space-y-6">
+                           <h2 class="text-4xl font-bold tracking-tight text-white">{{a.year}}</h2>
+                           <div class="prose max-w-none text-gray-500">
+                              <div class="prose max-w-none text-white">
+                                 <p>{{a.inductees|linebreaks}}</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </article>
+                  {% if user.is_authenticated %}
+                  <div class='right-6  pb-10 absolute'>
+                  <button onclick='window.location.href=href="{% url 'editInductees' a.pk %}"'
+                     id='forms-btn' class='mt-10 transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
+                     <p class='text-white font-semibold'>Edit</p>
+                  </button>
+                 
+                  {% endif %}
+               </li>
+               </ul>
+               <hr class='bg-white mt-14'>
+
+
+            </ul>
+         </div>
+   </div>
+                  {% endif %}
+
+   {% endfor %}
+
+
+   <style>
+      body {
+         background-color: #272727;
+      }
+   </style>
+
+   {% include "users/footer.html" %}
+
+   {%endblock content%}

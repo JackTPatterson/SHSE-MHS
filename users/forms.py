@@ -1,5 +1,5 @@
 from django import forms
-from .models import Feedback, Announcement, Dates
+from .models import Feedback, Announcement, Dates, Inductees
 
 
 GENERAL_REASON_CHOICES = [('Prospective Member', 'Prospective Member'),
@@ -135,3 +135,26 @@ class DatesEditForm(forms.ModelForm):
     class Meta:
         model = Dates
         fields = ('title', 'dates')
+
+
+
+class InducteesForm(forms.ModelForm):
+    
+    year = forms.IntegerField(required=True, label='Title', widget=forms.NumberInput(
+        attrs={
+            'class': 'appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-gray-500',
+            'id': 'year'
+        }
+    ))
+
+    inductees = forms.CharField(label='Dates', required=True, widget=forms.Textarea(
+        attrs={
+            'class': 'no-resize appearance-none block w-full bg-grey1 text-gray-700 rounded-lg py-3 px-4 text-white leading-tight focus:outline-none  focus:border-gray-500 h-48 resize-none',
+            
+        }
+    ))
+
+
+    class Meta:
+        model = Inductees
+        fields=('year', 'inductees', 'hide')

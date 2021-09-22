@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect, render
-from .forms import AnnouncementEditForm, FeedbackForm, AnnouncementForm, DatesForm, DatesEditForm
-from .models import Dates, Feedback, Announcement
+from .forms import AnnouncementEditForm, FeedbackForm, AnnouncementForm, DatesForm, DatesEditForm, InducteesForm
+from .models import Dates, Feedback, Announcement, Inductees
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as dj_login, logout
 from django.contrib.auth.decorators import login_required
@@ -12,10 +12,15 @@ from django.urls import reverse
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+import json
 # Create your views here.
 
 def index(request):
-    return render(request, "users/index.html")
+
+    context = {
+        'induct': Inductees.objects.latest('year')
+    }
+    return render(request, "users/index.html", context=context)
 
 def about(request):
     return render(request, "users/about.html")
@@ -136,6 +141,7 @@ class DatesList(ListView):
     context_object_name = 'dates'
     ordering = ['id']
 
+@login_required
 def addDates(request):
     form = DatesForm(request.POST)
     if request.method == 'POST':
@@ -148,6 +154,7 @@ def addDates(request):
     }
     return render(request, 'users/add-dates.html', context)
 
+@login_required
 def addAnnouncements(request):
     form = AnnouncementForm(request.POST)
     if request.method == "POST":
@@ -162,7 +169,7 @@ def addAnnouncements(request):
     return render(request, 'users/add-announcements.html', context)
 
 
-
+@login_required
 def editAnnouncements(request, announcementID):
     instance = get_object_or_404(Announcement, announcementID=announcementID)
     
@@ -174,8 +181,6 @@ def editAnnouncements(request, announcementID):
                 obj.save()
                 return redirect('announcements')
 
-
-
     context = {
         'form': form,
         'instance': instance,
@@ -183,6 +188,7 @@ def editAnnouncements(request, announcementID):
     }
     return render(request, 'users/announcements-edit.html', context)
 
+@login_required
 def editDates(request, pk):
     instance = get_object_or_404(Dates, pk=pk)
     
@@ -196,6 +202,7 @@ def editDates(request, pk):
         
     }
     return render(request, 'users/dates-edit.html', context)
+
 class deleteAnnouncements(DeleteView):
 
     template_name = 'users/announcement-delete.html'
@@ -221,3 +228,41 @@ class deleteDates(DeleteView):
     def get_success_url(self):
         return reverse('dates')
 
+
+class InducteesList(ListView):
+    model = Inductees
+    template_name = 'users/inductees'  # <app>/<model>_<viewtype>.html
+    context_object_name = 'inductees'
+    ordering = ['-year']
+
+@login_required
+def addInductees(request):
+    form = InducteesForm(request.POST)
+    yearList = Inductees.objects.values_list('year', flat=True).distinct()
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect("/inductees")
+    context = {
+        'form': form,
+        'years': list(yearList)
+    }
+    return render(request, 'users/add-inductees.html', context)
+
+@login_required
+def editInductees(request, pk):
+    instance = get_object_or_404(Inductees, pk=pk)
+    
+    form = InducteesForm(request.POST or None, instance=instance)
+    if request.method == "POST":
+            if form.is_valid():
+                form.save()
+                return redirect('/inductees')
+    context = {
+        'form': form,
+        
+    }
+    return render(request, 'users/edit-inductees.html', context)
+
+def page_not_found_view(request, exception):
+    return render(request, 'users/404.html', status=404)

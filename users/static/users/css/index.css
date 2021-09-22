@@ -271,6 +271,10 @@ body.hero-anime #switch {
 	display: none;
 }
 
+.navbar-toggler:focus{
+	box-shadow: none !important;
+}
+
 .dropdown-item {
 	border-radius: 5px;
 	padding: 3px 15px;
@@ -347,7 +351,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 #main-img {
-	margin-top: 250px;
+	margin-top: 150px;
 	max-width: 500px;
 }
 
@@ -357,7 +361,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media only screen and (max-width: 1280px) {
 	#main-img {
-		margin-top: 330px;
+		margin-top: 220px;
 		max-width: 300px;
 	}
 }
@@ -586,17 +590,17 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	background-repeat: no-repeat;
   }
   .icobg li:nth-of-type(3n) {
-	background-image: url("../images/plus.svg");
+	background-image: url("../images/minus.svg");
 	 background-color: white; 
   }
   .icobg li:nth-of-type(3n+1) {
-	background-image: url("../images/divide.svg");
+	background-image: url("../images/plus.svg");
 	 background-color: white; 
 	
 
   }
   .icobg li:nth-of-type(3n+2) {
-	background-image: url("../images/minus.svg");
+	background-image: url("../images/divide.svg");
 	 background-color: white; 
 
   }
@@ -688,3 +692,5 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	  opacity: 0;
 	}
   }
+
+ 

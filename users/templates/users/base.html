@@ -35,7 +35,7 @@
                 <div class="col-12">
                     <nav class="navbar navbar-expand-md navbar-dark my-2">
                         {% if user.is_authenticated %}
-                        <a href="{% url 'index' %}" class="navbar-brand">SHSE Math Honor Society <sup class='text-blue2'>Admin</sup></a>
+                        <a href="{% url 'index' %}" class="navbar-brand">SHSE Math Honor Society <span class='text-blue2'>•</span></a>
                         {% else %}
                         <a href="{% url 'index' %}" class="navbar-brand">SHSE Math Honor Society </a>
                         {% endif %}
@@ -55,7 +55,7 @@
 
                                 <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'forms' %}">
-                                        <p class='text-white'>Forms</p>
+                                        <p class='text-white'>Info</p>
                                     </a>
                                 </li>
                                 <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
@@ -119,6 +119,7 @@
 </script>
 
     <script src="../../../static/users/js/index.js"></script>
+
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
