@@ -27,7 +27,9 @@ class Feedback(models.Model):
         return f'{self.first_name.capitalize()}' + ' ' + f'{self.last_name.capitalize()}' + ' ➜ ' + f'{self.person}'
     
     class Meta:
-         verbose_name = "Feedback"
+         verbose_name = 'Feedback'
+         verbose_name_plural = "Feedback"
+        
 
 
 class Announcement(models.Model):
@@ -42,6 +44,7 @@ class Announcement(models.Model):
 
     class Meta:
          verbose_name = "Announcement"
+         verbose_name_plural = "Announcements"
 
 class Dates(models.Model):
     
@@ -53,7 +56,8 @@ class Dates(models.Model):
         return f'{self.title}'
 
     class Meta:
-         verbose_name = "Dates"
+         verbose_name = "Date"
+         verbose_name_plural = "Dates"
 
 class Inductees(models.Model):
     
@@ -65,5 +69,6 @@ class Inductees(models.Model):
         return f'{self.year}'
 
     class Meta:
-         verbose_name = "Inductee"
+         verbose_name = "List of Inductees"
+         verbose_name_plural = "Inductees"
 

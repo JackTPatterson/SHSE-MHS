@@ -29,7 +29,20 @@
 </div>
 
 <section class='xl:max-w-screen-2xl lg:max-w-screen-lg mx-auto'>
-
+{% if messages %}
+  {% for message in messages %}
+  <div id='alert-banner' class='z-50 mt-24 absolute' style='left: calc(50% - 132.0835px);'>
+    <div class="text-center py-4 lg:px-4">
+        <div style='background: rgb(69, 255, 115);'
+            class="p-2 bg-red items-center text-indigo-100 leading-none rounded-full flex lg:inline-flex"
+            role="alert">
+            
+            <span class="font-semibold mx-2 text-black text-left flex-auto">{{ message }}</span>
+        </div>
+    </div>
+</div>
+  {% endfor %}
+  {% endif %}
   <center>
     <div class="lg:flex lg:justify-between lg:flex-wrap lg:overflow-hidden md:px-10">
 
@@ -40,7 +53,8 @@
         </div>
       </div>
 
-      <div class="w-1/2 sm:w-full md:w-2/3 lg:w-1/2 xl:w-1/2"  data-aos="smooth" data-aos-easing="ease-in-out-cubic">
+      <div style='	padding-left: 150px !important;'
+       class="w-1/2 sm:w-full md:w-2/3 lg:w-1/2 xl:w-1/2"  data-aos="smooth" data-aos-easing="ease-in-out-cubic">
         <img src='../../static/users/images/logo.png' id='main-img'
           class='transform hover:scale-105 transition duration-500'>
 
@@ -51,7 +65,7 @@
   <div class='sub-btn sm:mt-10 md:mt-10 lg:mt-0 pb-20 lg:ml-10' data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-offset="0">
     <button id='scrollBtn' class='transition bg-blue1 hover:bg-blue2 text-white py-2 pl-8 pr-6 rounded-full'>
       <div class='flex'>
-        <p class='text-white font-semibold mr-3'>Scroll Down</p>
+        <p class='text-white font-semibold mr-3'>More Info</p>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
         </svg>
@@ -71,7 +85,7 @@
 
         <div class="space-y-12 md:text-center">
           <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
-            <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white">About Us</h2>
+            <h2 class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">About Us</h2>
             <p class="text-xl text-white">We are Smithtown East Math Honor Society,
               the largest club in High School East. We help the school and community through activities and events
               such as tutoring at the elementary, middle and high school levels.</p>
@@ -285,7 +299,7 @@
       <div class="md:flex  items-center pb-12">
         <div class="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
           <div class="py-2 text-color" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-            <h1 role="heading" class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white">Cillum sit
+            <h1 role="heading" class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">Cillum sit
               reprehenderit qui ipsum tempor occaecat exercitation.</h1>
             <!-- <p role="contentinfo" class="text-lg lg:text-xl lg:leading-7 md:leading-10 f-f-r py-4 md:py-8 text-white">Enim irure
               aute cillum commodo. Eiusmod ipsum velit consequat ea eiusmod. Aute mollit ullamco elit quis irure sunt
@@ -310,7 +324,7 @@
       <div class="md:flex flex-row-reverse items-center pb-12">
         <div class="md:w-1/2 lg:w-2/3 w-full xl:pl-20 md:pl-6">
           <div class="py-2 text-color" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-            <h1 role="heading" class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white">Cillum sit
+            <h1 role="heading" class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">Cillum sit
               reprehenderit qui ipsum tempor occaecat exercitation.</h1>
             <!-- <p role="contentinfo" class="text-lg lg:text-xl lg:leading-7 md:leading-10 f-f-r py-4 md:py-8 text-white">Enim irure
               aute cillum commodo. Eiusmod ipsum velit consequat ea eiusmod. Aute mollit ullamco elit quis irure sunt
@@ -330,41 +344,6 @@
   </div>
 </div>
 
-<!-- 
-<section>
-  <div class='mt-60'>
-    <div data-aos="open" data-aos-easing="ease-in-out-cubic" class=" px-12 mx-auto text-center bg-blue1 p-20">
-      <div class="space-y-12 md:text-center" data-aos="smooth5" data-aos-easing="ease-in-out-cubic">
-        <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
-          <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white">MHS Inductees</h2>
-          <p class="text-xl text-white">For the 2021 MHS Induction
-            Ceremony, both members inducted at the end of 2020 and members inducted in 2021 will be honored! A list
-            of the inductees (separated by year of induction) is included below. Congratulations to each and
-            everyone one of you!</p>
-        </div>
-      </div>
-
-      <div class="md:flex md:justify-center md:pr-4">
-        <div class='transform hover:scale-105 transition duration-500'>
-
-        <center> <button data-aos="smooth5" data-aos-easing="ease-in-out-cubic"
-            class='transition bg-white  py-3 px-5 rounded-xl mt-2 md:mr-6'
-            onclick="window.location.href='https://shsemhs.files.wordpress.com/2020/09/prospective-member-application-google-docs.pdf'">
-            <p class=' font-semibold text-xl'>View 2020 Inductees</p>
-          </button>
-        </center>
-        </div>
-        <div class='transform hover:scale-105 transition duration-500'>
-
-        <center> <button data-aos="smooth5" data-aos-easing="ease-in-out-cubic"
-            class='transition bg-white py-3 px-5 rounded-xl mt-2 md:ml-6 '
-            onclick="window.location.href='https://shsemhs.files.wordpress.com/2020/09/prospective-member-application-google-docs.pdf'">
-            <p class=' font-semibold text-xl '>View 2021 Inductees</p>
-          </button>
-        </center>
-        </div>
-      </div> -->
-
 <div class="mx-auto py-12 mt-40" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
   <div class="w-full flex justify-center">
     <div id='expand-div'
@@ -378,19 +357,18 @@
                 class="text-xl md:text-2xl lg:text-4xl xl:text-5xl lg:w-10/12 text-white font-black leading-tight md:mx-0 mx-6">
                 Here are the new MHS inductees for {{induct}}</h1>
             </div>
-            <div class='mt-12 '>
+            <div class=''>
               
-              <button data-aos="smooth" onclick="window.location.href='{% url 'inductees' %}'"
-                class="md:mr-3 mr-5 mt-5 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 bg-white font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 "><p>View
+              <button onclick="window.location.href='{% url 'inductees' %}'"
+                class="md:mr-3 mr-5 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 bg-white font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 "><p>View
                 {{induct}} Inductees</p></button>
 
                 {% if user.is_authenticated %}
-                <button data-aos="smooth" onclick="window.location.href='{% url 'newInductees' %}'"
-                class="md:mr-3 mt-5 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 bg-transparent">
+                <button onclick="window.location.href='{% url 'newInductees' %}'"
+                class="md:mr-3 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 bg-transparent">
                 <p class='text-white'>+</p>
               </button>
               {% endif %}
-            
             </div>
           </div>
           <div class="md:w-1/3 w-full">
@@ -478,12 +456,17 @@
 
 </script>
 
-
+<!-- {% if messages %}
+<script>
+   
+   $('#alert-banner').fadeIn()
+                     setTimeout(function() {
+                         $('#alert-banner').fadeOut()
+                     }, 4000)
+</script>
+{% endif %} -->
 
 
 {% include "users/footer.html" %}
-
-
-
 
 {%endblock content%}

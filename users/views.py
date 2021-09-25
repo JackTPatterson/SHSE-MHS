@@ -1,4 +1,6 @@
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
+from django.urls.base import reverse_lazy
 from .forms import AnnouncementEditForm, FeedbackForm, AnnouncementForm, DatesForm, DatesEditForm, InducteesForm
 from .models import Dates, Feedback, Announcement, Inductees
 from django.contrib import messages
@@ -63,8 +65,8 @@ def contactTechnical(request):
             msg.send()
 
 
-            messages.success(request, 'Thank you for submitting your feedback')
-            return redirect('index')
+            messages.success(request, 'Thank you for your feedback')
+            return HttpResponseRedirect(reverse_lazy('index'))
     context = {
         'form': form
     }
@@ -93,8 +95,8 @@ def contactGeneral(request):
             msg.send()
 
 
-            messages.success(request, 'Thank you for submitting your feedback')
-            return redirect('index')
+            messages.success(request, 'Thank you for your feedback')
+            return HttpResponseRedirect(reverse_lazy('index'))
     context = {
         'form': form
     }
@@ -134,12 +136,14 @@ class Announcements(ListView):
     template_name = 'users/announcement'  # <app>/<model>_<viewtype>.html
     context_object_name = 'announcements'
     ordering = ['date']
+    paginate_by = 5
 
 class DatesList(ListView):
     model = Dates
     template_name = 'users/dates'  # <app>/<model>_<viewtype>.html
     context_object_name = 'dates'
     ordering = ['id']
+    paginate_by = 5
 
 @login_required
 def addDates(request):
@@ -148,7 +152,8 @@ def addDates(request):
         if form.is_valid():
             form.save()
             
-            return redirect("/dates")
+            messages.success(request, 'Dates Added')
+            return HttpResponseRedirect(reverse_lazy('dates'))
     context = {
         'form': form
     }
@@ -162,7 +167,8 @@ def addAnnouncements(request):
             obj = form.save(commit = False)
             obj.announcementID = random_with_N_digits(7)
             form.save()
-            return redirect("/announcements")
+            messages.success(request, 'Announcement Added')
+            return HttpResponseRedirect(reverse_lazy('announcements'))
     context = {
         'form': form
     }
@@ -179,7 +185,8 @@ def editAnnouncements(request, announcementID):
                 obj = form.save(commit = False)
                 obj.announcementID = announcementID
                 obj.save()
-                return redirect('announcements')
+                messages.success(request, 'Announcement Changed')
+                return HttpResponseRedirect(reverse_lazy('announcements'))
 
     context = {
         'form': form,
@@ -196,7 +203,8 @@ def editDates(request, pk):
     if request.method == "POST":
             if form.is_valid():
                 form.save()
-                return redirect('/dates')
+                messages.success(request, 'Dates Changed')
+                return HttpResponseRedirect(reverse_lazy('dates'))
     context = {
         'form': form,
         
@@ -234,6 +242,7 @@ class InducteesList(ListView):
     template_name = 'users/inductees'  # <app>/<model>_<viewtype>.html
     context_object_name = 'inductees'
     ordering = ['-year']
+    paginate_by = 5
 
 @login_required
 def addInductees(request):
@@ -242,7 +251,9 @@ def addInductees(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect("/inductees")
+            messages.success(request, 'Inductees Added')
+            return HttpResponseRedirect(reverse_lazy('inductees'))
+
     context = {
         'form': form,
         'years': list(yearList)
@@ -257,7 +268,8 @@ def editInductees(request, pk):
     if request.method == "POST":
             if form.is_valid():
                 form.save()
-                return redirect('/inductees')
+                messages.success(request, 'Inductees Changed')
+                return HttpResponseRedirect(reverse_lazy('inductees'))
     context = {
         'form': form,
         

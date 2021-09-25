@@ -3,7 +3,7 @@
 {%block content%}
 
 
-<h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white mt-28 text-center">Important Dates</h2>
+<h2 class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white mt-28 text-center">Important Dates</h2>
     {% if user.is_authenticated %}
     <center> <button id='forms-btn'
         class='transition bg-blue1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mt-10'
@@ -12,6 +12,23 @@
     </button>
 </center>
     {% endif %}
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <div id='alert-banner' class='z-50 mt-1 absolute'>
+      <div class="text-center py-4 lg:px-4">
+          <div style='background: rgb(69, 255, 115);'
+              class="p-2 bg-red items-center text-indigo-100 leading-none rounded-full flex lg:inline-flex"
+              role="alert">
+              
+              <span class="font-semibold mx-2 text-black text-left flex-auto">{{ message }}</span>
+          </div>
+      </div>
+  </div>
+    {% endfor %}
+</ul>
+{% endif %}
+    
    <div class='mt-10'>
     {% for d in dates %}
 
@@ -25,7 +42,7 @@
                    
                    <div class="space-y-5 xl:col-span-3">
                       <div class="space-y-6">
-                         <h2 class="text-2xl font-bold tracking-tight text-white">{{d.title}}</h2>
+                         <h2 class="text-2xl font-bold tracking-normal text-white">{{d.title}}</h2>
                          <div class="prose max-w-none text-gray-500">
                             <div class="prose max-w-none text-white">
                                <p>{{d.dates|linebreaks}}</p>
@@ -50,10 +67,72 @@
 
              
           </ul>
+         
        </div>
  </div>
- {% endfor %}
 
+ 
+ {% endfor %}
+ <div class="container mx-auto flex flex-wrap pt-4 pb-12 max-w-3xl" data-aos="smooth"
+ data-aos-easing="ease-in-out-cubic">
+ <div class="w-full mx-auto md:w-1/2 md:p-6 flex flex-col flex-grow flex-shrink">
+    <div class="flex-1 mx-auto rounded-lg overflow-hidden ">
+
+       <center>
+          <div class='flex mx-auto'>
+             {% if page_obj.has_previous %}
+
+             <button id='forms-btn'
+                class='transition duration-500 hover:bg-blue1 border-blue1 border-3 text-white py-1 px-1 rounded-xl mb-10 w-36'
+                onclick="window.location.href='?page={{ page_obj.previous_page_number }}'">
+                <p class='text-white text-xl font-semibold'>‎‎‎‎‎‎ Previous </p>
+             </button>
+             <div class=" mx-3 border-blue1 border-3 text-white py-1 px-1 rounded-xl mb-10 w-36">
+                <center style='margin-top: 2px;'>
+                   Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </center>
+             </div>
+
+             {% endif %}
+             {% if page_obj.has_next %}
+             <div class=" mx-3 border-blue1 border-3 text-white py-1 px-1 rounded-xl mb-10 w-36">
+                <center style='margin-top: 2px;'>
+                   Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </center>
+             </div>
+             <button id='forms-btn'
+                class='transition duration-500 hover:bg-blue1 border-blue1 border-3 text-white py-1 px-1 rounded-xl mb-10 w-36'
+                onclick="window.location.href='?page={{ page_obj.next_page_number }}'">
+                <p class='text-white text-xl font-semibold'>‎‎‎‎‎‎ Next </p>
+             </button>
+             {% endif %}
+          </div>
+       </center>
+    </div>
+ </div>
+
+</div>
+ {% if messages %}
+ <script>
+    $.fn.centerMe = function () {
+       this.css('left', ($(window).width() / 2 - $(this).width() / 2) - 4);
+    };
+    window.onload = function () {
+       console.log($('#alert-banner').width() / 2)
+
+    }
+
+    $(window).resize(function () {
+       $('#alert-banner').centerMe();
+    });
+
+    $('#alert-banner').centerMe();
+    $('#alert-banner').fadeIn()
+    setTimeout(function () {
+       $('#alert-banner').fadeOut()
+    }, 4000)
+ </script>
+{% endif %}
 
     <style>
         body{

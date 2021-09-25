@@ -1,8 +1,15 @@
 <link rel="stylesheet" href='../../static/users/css/tailwind.css'>
+<link rel="stylesheet" href='../../static/users/css/index.css'>
 
 
 
-<h2 style='color: white;' class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white mt-28 text-center">General Feedback</h2>
+<center> <button id='forms-btn' 
+  class='transition bg-grey1 hover:bg-blue2 text-white py-2 px-4 rounded-xl mt-12'
+  onclick="window.location.href='{% url 'contact' %}'">
+  <p style='color: white;' class='text-white font-semibold'>Go back</p>
+</button>
+</center>
+<h2 style='color: white;' class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white mt-12 text-center">General Feedback</h2>
 
 <!-- component -->
 <section  class="container mx-auto p-6">
@@ -48,7 +55,7 @@
 
 
   
-  <h2 style='color: white;' class="relative text-4xl font-extrabold tracking-tight sm:text-5xl text-white mt-28 text-center">Technical Feedback</h2>
+  <h2 style='color: white;' class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white mt-28 text-center">Technical Feedback</h2>
 
 <!-- component -->
 <section  class="container mx-auto p-6">

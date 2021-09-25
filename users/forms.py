@@ -155,6 +155,7 @@ class InducteesForm(forms.ModelForm):
     ))
 
 
+
     class Meta:
         model = Inductees
         fields=('year', 'inductees', 'hide')

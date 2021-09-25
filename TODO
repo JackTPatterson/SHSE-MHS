@@ -4,14 +4,9 @@
 - Talk about
     -- Is a gallery a necesity 
         -- Has not been updated for recent years
-        -- Nothing in 2017-2018 / 2018-2019 
-
-    -- Custom forms instead of google forms
-        -- Display data on site
-        -- Recieve emails when any form is completed
+        -- Nothing in 2017-2018 / 2018-2019
 
 
--- Find places to add color
+
 -- Remove django secret key from settings
--- Make home page pop more
 -- Create instructions for new owners (this can be done last)

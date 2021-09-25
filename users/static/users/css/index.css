@@ -351,6 +351,8 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 #main-img {
+	padding-left: 150px !important;
+
 	margin-top: 150px;
 	max-width: 500px;
 }
@@ -692,5 +694,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	  opacity: 0;
 	}
   }
+
+ 
 
  
