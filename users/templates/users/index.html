@@ -1,5 +1,5 @@
 {% extends 'users/base.html' %}
-<script src="../../static/users/js/owl.carousel.js"></script>
+
 
 {%block content%}
 <div class="floatbg">
@@ -16,7 +16,7 @@
     <li></li>
   </ul>
 </div>
-<div style='top: 1500px;' class='absolute md:h-full h-1/2 ' id='plus-bg' data-jsuplxdir="bottom" data-jsuplxperspective="300">
+<!-- <div style='top: 1500px;' class='absolute md:h-full h-1/2 ' id='plus-bg' data-jsuplxdir="bottom" data-jsuplxperspective="300">
   <img src='https://vectr.com/tmp/d2jTlDjwu1/a2HmhqBHFh.svg?width=640&height=640&select=a2HmhqBHFhpage0'>
 </div>
 
@@ -26,9 +26,10 @@
 
 <div style='top: 3500px;' class='absolute md:h-full h-1/2' id='plus-bg' data-jsuplxdir="bottom" data-jsuplxperspective="300">
   <img src='https://vectr.com/tmp/d2jTlDjwu1/d2vC1jejio.svg?width=640&height=640&select=d2vC1jejiopage0'>
-</div>
+</div> -->
 
-<section class='xl:max-w-screen-2xl lg:max-w-screen-lg mx-auto'>
+<!-- <section class='xl:max-w-screen-2xl lg:max-w-screen-lg mx-auto'>
+  
 {% if messages %}
   {% for message in messages %}
   <div id='alert-banner' class='z-50 mt-24 absolute' style='left: calc(50% - 132.0835px);'>
@@ -53,7 +54,7 @@
         </div>
       </div>
 
-      <div style='	padding-left: 150px !important;'
+      <div
        class="w-1/2 sm:w-full md:w-2/3 lg:w-1/2 xl:w-1/2"  data-aos="smooth" data-aos-easing="ease-in-out-cubic">
         <img src='../../static/users/images/logo.png' id='main-img'
           class='transform hover:scale-105 transition duration-500'>
@@ -74,219 +75,246 @@
   </div>
   </div>
   </div>
+</section> -->
+
+<section><div class="pt-24 lg:pt-32 pb-20 " data-aos='smooth'>
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
+        <div class="w-full text-center lg:text-left">
+          <div class="max-w-xl mx-auto lg:mx-0">
+            <h2 class="text-4xl lg:text-6xl text-white font-bold">
+              <span class='leading-snug'>Welcome to the</span>
+              <span class="text-blue2 leading-snug">SHSE Math Honor Society</span>
+            </h2>
+          </div>
+          <div class="max-w-sm mx-auto lg:mx-0">
+            <div><a class="inline-block mb-3 mt-10 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-blue2 hover:bg-purple-700 text-white font-semibold rounded-l-xl rounded-xl transition duration-200" href="{% url 'forms' %}">Get Started</a><a class="inline-block w-full lg:w-auto py-2 px-6 leading-loose text-white font-semibold bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-l-xl rounded-xl transition duration-200 cursor-pointer" id='scrollBtn'>Learn More</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2 px-4 flex items-center justify-center">
+        <div class="relative" style="z-index: 0;">
+          <img class="w-full max-w-lg object-cover rounded-3xl md:rounded-br-none md:h-128" src="../../static/users/images/logo.png" alt=""><img class="hidden md:block absolute" style="top:-2rem; right: 3rem; z-index: -1;" src="../../static/users/atis-assets/elements/blue-up.svg" alt=""><img class="hidden md:block absolute" style="bottom:-2rem; right: -2rem; z-index: -1;" src="../../static/users/atis-assets/elements/wing-purple-down.svg" alt=""><img class="hidden md:block absolute" style="top:3rem; right: -3rem; z-index: -1;" src="../../static/users/atis-assets/elements/bullets-dark-right.svg" alt=""><img class="hidden md:block absolute" style="bottom:2.5rem; left: -4.5rem; z-index: -1;" src="../../static/users/atis-assets/elements/bullets-yellow-left.svg" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </section>
 
 
 <section id='about' data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-  <div class='mt-60'>
-    <!-- Section 1 -->
-    <section class="w-full py-12 lg:py-24">
-      <div class="max-w-6xl px-12 mx-auto text-center">
+<div class='mt-60'>
+  <!-- Section 1 -->
+  <section class="w-full py-12 lg:py-24">
+    <div class="max-w-6xl px-12 mx-auto text-center">
 
-        <div class="space-y-12 md:text-center">
-          <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
-            <h2 class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">About Us</h2>
-            <p class="text-xl text-white">We are Smithtown East Math Honor Society,
-              the largest club in High School East. We help the school and community through activities and events
-              such as tutoring at the elementary, middle and high school levels.</p>
+      <div class="space-y-12 md:text-center">
+        <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
+          <h2 class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">About Us</h2>
+          <p class="text-xl text-white">We are Smithtown East Math Honor Society,
+            the largest club in High School East. We help the school and community through activities and events
+            such as tutoring at the elementary, middle and high school levels.</p>
+        </div>
+      </div>
+
+      <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 mb-10 mt-1">
+
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
+            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium mt-3">Mrs. Boccio-McComb</h2>
+              <p class="font-medium text-blue-500">Mentor</p>
+            </div>
+          </div>
+
+        </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth2" data-aos-easing="ease-in-out-cubic"
+            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium mt-3">Mrs. Schoepflin</h2>
+              <p class="font-medium text-blue-500">Mentor</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2  mb-10">
+
+        <div class='transform hover:scale-105 transition duration-500 '>
+          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
+            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Isabela Londono</h2>
+              <p class="font-medium text-blue-500">President</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Dylan McCreesh</h2>
+              <p class="font-medium text-blue-500">President</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Brandon Locke</h2>
+              <p class="font-medium text-blue-500">Vice President</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic" data-aos-delay="50"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Emma McDevitt</h2>
+              <p class="font-medium text-blue-500">Treasurer/Fundraising</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 mb-10 mt-1">
+        <!-- TODO: Hover scaling does not work on this one -->
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth3" data-aos-easing="ease-in-out-cubic" data-aos-delay="100"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
 
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-              class="rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium mt-3">Mrs. Boccio-McComb</h2>
-                <p class="font-medium text-blue-500">Mentor</p>
-              </div>
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Prateeksha Garlapad</h2>
+              <p class="font-medium text-blue-500">Secretary of Attendance</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
             </div>
-
           </div>
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth2" data-aos-easing="ease-in-out-cubic"
-              class="rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium mt-3">Mrs. Schoepflin</h2>
-                <p class="font-medium text-blue-500">Mentor</p>
-              </div>
+
+        </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth2" data-aos-easing="ease-in-out-cubic" data-aos-delay="50"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Jessica Moylan</h2>
+              <p class="font-medium text-blue-500">Secretary of Outreach</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth3" data-aos-easing="ease-in-out-cubic" data-aos-delay="100"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Gianna Antonacci</h2>
+              <p class="font-medium text-blue-500">STEAM Coordinator</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
+
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium mt-2">Amna Hashmi</h2>
+              <p class="font-medium text-blue-500">STEAM Coordinator</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
             </div>
 
           </div>
         </div>
 
-        <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2  mb-10">
 
-          <div class='transform hover:scale-105 transition duration-500 '>
-            <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-              class="rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2 transition hover:bg-blue2">
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
 
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Isabela Londono</h2>
-                <p class="font-medium text-blue-500">President</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
+            <div class="flex flex-col items-center justify-center p-10 pt-14 pb-6">
+              <h2 class="text-lg font-medium">Krishna Palempalli</h2>
+              <p class="font-medium text-blue-500">Middle School Tutoring</p>
+              <p class="text-gray-400">[ GRADE ]
+                <p class="font-medium text-blue-500 invisible">Middle School Tutoring</p>
+              </p>
             </div>
-
           </div>
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
 
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Dylan McCreesh</h2>
-                <p class="font-medium text-blue-500">President</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-            </div>
-
-          </div>
         </div>
 
-        <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
 
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Brandon Locke</h2>
-                <p class="font-medium text-blue-500">Vice President</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-            </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
+            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
 
-          </div>
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth" data-aos-easing="ease-in-out-cubic" data-aos-delay="50"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Emma McDevitt</h2>
-                <p class="font-medium text-blue-500">Treasurer/Fundraising</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Micheal Gannon</h2>
+              <p class="font-medium text-blue-500">Middle School Tutoring Coordinators</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
             </div>
           </div>
 
-          <!-- TODO: Hover scaling does not work on this one -->
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth3" data-aos-easing="ease-in-out-cubic" data-aos-delay="100"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
+        </div>
 
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Prateeksha Garlapad</h2>
-                <p class="font-medium text-blue-500">Secretary of Attendance</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-            </div>
+        <div class='transform hover:scale-105 transition duration-500'>
+          <div data-aos="smooth5" data-aos-easing="ease-in-out-cubic" data-aos-delay="200"
+            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2">
 
-          </div>
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth2" data-aos-easing="ease-in-out-cubic" data-aos-delay="50"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Jessica Moylan</h2>
-                <p class="font-medium text-blue-500">Secretary of Outreach</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth3" data-aos-easing="ease-in-out-cubic" data-aos-delay="100"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Gianna Antonacci</h2>
-                <p class="font-medium text-blue-500">STEAM Coordinator</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium mt-2">Amna Hashmi</h2>
-                <p class="font-medium text-blue-500">STEAM Coordinator</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-
+            <div class="flex flex-col items-center justify-center p-10">
+              <h2 class="text-lg font-medium">Emily Penna</h2>
+              <p class="font-medium text-blue-500">Middle School Tutoring Coordinators</p>
+              <p class="text-gray-400">[ GRADE ]
+              </p>
             </div>
           </div>
-
-
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10 pt-14 pb-6">
-                <h2 class="text-lg font-medium">Krishna Palempalli</h2>
-                <p class="font-medium text-blue-500">Middle School Tutoring</p>
-                <p class="text-gray-400">[ GRADE ]
-                  <p class="font-medium text-blue-500 invisible">Middle School Tutoring</p>
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
-              class=" rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Micheal Gannon</h2>
-                <p class="font-medium text-blue-500">Middle School Tutoring Coordinators</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <div class='transform hover:scale-105 transition duration-500'>
-            <div data-aos="smooth5" data-aos-easing="ease-in-out-cubic" data-aos-delay="200"
-              class="rounded-lg shadow-sm bg-grey1 transition hover:bg-blue2">
-
-              <div class="flex flex-col items-center justify-center p-10">
-                <h2 class="text-lg font-medium">Emily Penna</h2>
-                <p class="font-medium text-blue-500">Middle School Tutoring Coordinators</p>
-                <p class="text-gray-400">[ GRADE ]
-                </p>
-              </div>
-            </div>
-
-
-          </div>
-
 
 
         </div>
+
+
 
       </div>
-    </section>
-  </div>
-  </div>
-  </center>
+
+    </div>
+  </section>
+</div>
+</div>
+</center>
 
 
 
-  </div>
+</div>
 </section>
 
 
@@ -294,142 +322,140 @@
 
 
 <div class=" px-4 xl:max-w-screen-2xl lg:max-w-screen-lg mx-auto">
-  <div class="pt-10 md:pt-40">
-    <div class="lg:container max-w-6xl mx-auto px-4 kg:px-0 lg:mx-0">
-      <div class="md:flex  items-center pb-12">
-        <div class="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
-          <div class="py-2 text-color" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-            <h1 role="heading" class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">Cillum sit
-              reprehenderit qui ipsum tempor occaecat exercitation.</h1>
-            <!-- <p role="contentinfo" class="text-lg lg:text-xl lg:leading-7 md:leading-10 f-f-r py-4 md:py-8 text-white">Enim irure
-              aute cillum commodo. Eiusmod ipsum velit consequat ea eiusmod. Aute mollit ullamco elit quis irure sunt
-              et. Cupidatat laboris culpa nisi irure excepteur anim et. Aliquip quis enim magna aliqua mollit esse
-              commodo aute eu Lorem amet nostrud quis. Incididunt deserunt in mollit minim enim. Ex amet deserunt veniam
-              et sunt proident ullamco mollit nisi consectetur.</p> -->
+<div class="pt-10 md:pt-40">
+  <div class="lg:container max-w-6xl mx-auto px-4 kg:px-0 lg:mx-0">
+    <div class="md:flex  items-center pb-12">
+      <div class="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
+        <div class="py-2 text-color" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
+          <h1 role="heading" class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">Cillum sit
+            reprehenderit qui ipsum tempor occaecat exercitation.</h1>
+          <!-- <p role="contentinfo" class="text-lg lg:text-xl lg:leading-7 md:leading-10 f-f-r py-4 md:py-8 text-white">Enim irure
+            aute cillum commodo. Eiusmod ipsum velit consequat ea eiusmod. Aute mollit ullamco elit quis irure sunt
+            et. Cupidatat laboris culpa nisi irure excepteur anim et. Aliquip quis enim magna aliqua mollit esse
+            commodo aute eu Lorem amet nostrud quis. Incididunt deserunt in mollit minim enim. Ex amet deserunt veniam
+            et sunt proident ullamco mollit nisi consectetur.</p> -->
 
-          </div>
         </div>
-        <div class="lg:w-1/3 md:w-1/2 w-full relative h-96 flex items-end justify-center " data-aos="smooth2"
-          data-aos-easing="ease-in-out-cubic">
-          <img
-            class="absolute w-full h-full inset-0 object-cover object-center rounded-lg transform hover:scale-105 transition duration-500"
-            src="https://shsemhs.files.wordpress.com/2017/01/img_2750.jpg?w=NaN&h=" role="img" />
-        
-        </div>
+      </div>
+      <div class="lg:w-1/3 md:w-1/2 w-full relative h-96 flex items-end justify-center " data-aos="smooth2"
+        data-aos-easing="ease-in-out-cubic">
+        <img
+          class="absolute w-full h-full inset-0 object-cover object-center rounded-lg transform hover:scale-105 transition duration-500"
+          src="https://shsemhs.files.wordpress.com/2017/01/img_2750.jpg?w=NaN&h=" role="img" />
+      
       </div>
     </div>
   </div>
-  <div class="pt-10 md:pt-16 ">
-    <div class="lg:container max-w-6xl mx-auto px-4 kg:px-0 lg:mx-0">
-      <div class="md:flex flex-row-reverse items-center pb-12">
-        <div class="md:w-1/2 lg:w-2/3 w-full xl:pl-20 md:pl-6">
-          <div class="py-2 text-color" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-            <h1 role="heading" class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">Cillum sit
-              reprehenderit qui ipsum tempor occaecat exercitation.</h1>
-            <!-- <p role="contentinfo" class="text-lg lg:text-xl lg:leading-7 md:leading-10 f-f-r py-4 md:py-8 text-white">Enim irure
-              aute cillum commodo. Eiusmod ipsum velit consequat ea eiusmod. Aute mollit ullamco elit quis irure sunt
-              et. Cupidatat laboris culpa nisi irure excepteur anim et. Aliquip quis enim magna aliqua mollit esse
-              commodo aute eu Lorem amet nostrud quis. Incididunt deserunt in mollit minim enim. Ex amet deserunt veniam
-              et sunt proident ullamco mollit nisi consectetur.</p> -->
-          </div>
+</div>
+<div class="pt-10 md:pt-16 ">
+  <div class="lg:container max-w-6xl mx-auto px-4 kg:px-0 lg:mx-0">
+    <div class="md:flex flex-row-reverse items-center pb-12">
+      <div class="md:w-1/2 lg:w-2/3 w-full xl:pl-20 md:pl-6">
+        <div class="py-2 text-color" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
+          <h1 role="heading" class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">Cillum sit
+            reprehenderit qui ipsum tempor occaecat exercitation.</h1>
+          <!-- <p role="contentinfo" class="text-lg lg:text-xl lg:leading-7 md:leading-10 f-f-r py-4 md:py-8 text-white">Enim irure
+            aute cillum commodo. Eiusmod ipsum velit consequat ea eiusmod. Aute mollit ullamco elit quis irure sunt
+            et. Cupidatat laboris culpa nisi irure excepteur anim et. Aliquip quis enim magna aliqua mollit esse
+            commodo aute eu Lorem amet nostrud quis. Incididunt deserunt in mollit minim enim. Ex amet deserunt veniam
+            et sunt proident ullamco mollit nisi consectetur.</p> -->
         </div>
-        <div class="lg:w-1/3 md:w-1/2 w-full relative h-96 flex items-end justify-center " data-aos="smooth2"
-          data-aos-easing="ease-in-out-cubic">
-          <img
-            class="absolute w-full h-full inset-0 object-cover object-center rounded-lg transform hover:scale-105 transition duration-500"
-            src="https://shsemhs.files.wordpress.com/2017/01/img_2766.jpg?w=NaN&h=" role="img" />
-        
       </div>
+      <div class="lg:w-1/3 md:w-1/2 w-full relative h-96 flex items-end justify-center " data-aos="smooth2"
+        data-aos-easing="ease-in-out-cubic">
+        <img
+          class="absolute w-full h-full inset-0 object-cover object-center rounded-lg transform hover:scale-105 transition duration-500"
+          src="https://shsemhs.files.wordpress.com/2017/01/img_2766.jpg?w=NaN&h=" role="img" />
+      
     </div>
   </div>
+</div>
 </div>
 
 <div class="mx-auto py-12 mt-40" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-  <div class="w-full flex justify-center">
-    <div id='expand-div'
-      class="w-full lg:mx-4 bg-gradient-to-r from-blue1 to-blue2 md:py-8 md:px-8 py-4 xl:px-12 xl:py-16 rounded-xl">
-      <div>
-        <div class="flex flex-wrap items-center md:flex-row flex-col-reverse">
-          <div
-            class="md:w-2/3 w-full md:pb-0 md:pr-6 flex-col md:block flex items-center justify-center md:pt-0 pt-4">
-            <div>
-              <h1 role="heading" id='ind-head'
-                class="text-xl md:text-2xl lg:text-4xl xl:text-5xl lg:w-10/12 text-white font-black leading-tight md:mx-0 mx-6">
-                Here are the new MHS inductees for {{induct}}</h1>
-            </div>
-            <div class=''>
-              
-              <button onclick="window.location.href='{% url 'inductees' %}'"
-                class="md:mr-3 mr-5 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 bg-white font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 "><p>View
-                {{induct}} Inductees</p></button>
-
-                {% if user.is_authenticated %}
-                <button onclick="window.location.href='{% url 'newInductees' %}'"
-                class="md:mr-3 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 bg-transparent">
-                <p class='text-white'>+</p>
-              </button>
-              {% endif %}
-            </div>
+<div class="w-full flex justify-center">
+  <div id='expand-div'
+    class="w-full lg:mx-4 bg-gradient-to-r from-blue1 to-blue2 md:py-8 md:px-8 py-4 xl:px-12 xl:py-16 rounded-xl">
+    <div>
+      <div class="flex flex-wrap items-center md:flex-row flex-col-reverse">
+        <div
+          class="md:w-2/3 w-full md:pb-0 md:pr-6 flex-col md:block flex items-center justify-center md:pt-0 pt-4">
+          <div>
+            <h1 role="heading" id='ind-head'
+              class="text-xl md:text-2xl lg:text-4xl xl:text-5xl lg:w-10/12 text-white font-black leading-tight md:mx-0 mx-6">
+              Here are the new MHS inductees for {{induct}}</h1>
           </div>
-          <div class="md:w-1/3 w-full">
-            <div class="flex md:flex-col items-center justify-center">
-              <div class="flex items-center" aria-label="group of images" role="img">
-                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
-                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-                </div>
-                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
-                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
-                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-                </div>
+          <div class=''>
+            
+            <button onclick="window.location.href='{% url 'inductees' %}'"
+              class="md:mr-3 mr-5 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 bg-white font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 "><p>View
+              {{induct}} Inductees</p></button>
+
+              {% if user.is_authenticated %}
+              <button onclick="window.location.href='{% url 'newInductees' %}'"
+              class="md:mr-3 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 bg-transparent">
+              <p class='text-white'>+</p>
+            </button>
+            {% endif %}
+          </div>
+        </div>
+        <div class="md:w-1/3 w-full">
+          <div class="flex md:flex-col items-center justify-center">
+            <div class="flex items-center" aria-label="group of images" role="img">
+              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
+                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
               </div>
-              <div class="flex items-center md:mt-4">
-                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
-                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-                </div>
-                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
-                    alt="avatar image" data-aos="grow" data-aos-delay="200ms" />
-                </div>
-                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
-                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
-                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-                </div>
+              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
+                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
+                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
               </div>
-              <div class="flex items-center md:mt-4">
-                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
-                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-                </div>
-                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
-                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
-                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-                </div>
-                
+            </div>
+            <div class="flex items-center md:mt-4">
+              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
+                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
               </div>
+              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
+                  alt="avatar image" data-aos="grow" data-aos-delay="200ms" />
+              </div>
+              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
+                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
+                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+              </div>
+            </div>
+            <div class="flex items-center md:mt-4">
+              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
+                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+              </div>
+              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
+                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
+                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+              </div>
+              
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-     
-    
-  </div>
+   
+  
+</div>
 
 
 </div>
-</center>
-
 </div>
-</section>
 
 
 <style>
   body {
-    background-color: #1f1f1f;
+    background-color: #0f0f11;
 
   }
+
 </style>
 <script src="../../static/users/js/parallax.min.js"></script>
 
@@ -441,15 +467,7 @@
 
 
      
-    $("#owl-demo").owlCarousel({
-   
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-   
-        items : 4,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3]
-   
-    });
+  
    
   
 

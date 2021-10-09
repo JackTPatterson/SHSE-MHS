@@ -27,8 +27,76 @@
 
 
 </head>
+<div class="" id="content">
 
-<body class="hero-anime">	
+    <section data-section-id="1" data-category="navigations" data-component-id="886f4350_02_awz" class="py-8 px-4 lg:px-10 bg-gray-800">
+      <nav class="relative flex justify-between items-center">
+        <a class="text-2xl text-white font-bold" href="#" data-config-id="brand">
+            <h1 class='text-white text-4xl'>SHSE-MHS</h1>
+        </a>
+        <div class="lg:hidden">
+          <button class="p-2 navbar-burger">
+            <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
+          </button>
+        </div>
+        <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+          <ul class="flex items-center text-white space-x-10">
+            <li><a class="text-white font-bold text-lg" href="{% url 'index' %}" data-config-id="link1">Home</a></li>
+            <span>
+              <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+            </span>
+            <li><a class="text-white font-bold text-lg" href="{% url 'forms' %}" data-config-id="link2">Info</a></li>
+            <span>
+              <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+            </span>
+            <li><a class="text-white font-bold text-lg" href="{% url 'announcements' %}" data-config-id="link3">Posts</a></li>
+            <span>
+              <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+            </span>
+            <li><a class="text-white font-bold text-lg" href="{% url 'dates' %}" data-config-id="link4">Dates</a></li>
+            <span>
+                <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+            </span>
+            <li><a class="text-white font-bold text-lg" href="{% url 'signup' %}" data-config-id="link4">Tutoring Signup</a></li>
+            <span>
+                <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
+              </span>
+              <li><a class="text-white font-bold text-lg" href="{% url 'contact' %}" data-config-id="link4">Contact</a></li>
+            
+          </ul>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="hidden lg:block"><a class="inline-block px-12 py-2 text-white font-bold border hover:border-white rounded-full" href="{% url 'logout-view' %}" data-config-id="primary-action">Logout</a></div>
+      {% endif %}
+    </nav>
+      <div class="hidden navbar-menu relative z-50">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"><div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="#">SHSE-MHS</a>
+            <button class="navbar-close">
+              <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+          </div>
+          <div>
+            <ul><li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'index' %}">Home</a></li>
+              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'forms' %}">Info</a></li>
+              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'announcements' %}">Posts</a></li>
+              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'dates' %}">Dates</a></li>
+              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'signup' %}">Tutoring Signup</a></li>
+              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'contact' %}">Contact</a></li>
+
+
+            </ul></div>
+          <div class="mt-auto">
+              {% if user.is_authenticated %}
+            <div class="pt-6"><a class="block px-4 py-3 mb-3 leading-loose text-md text-center font-semibold leading-none rounded-l-xl rounded-t-xl" href="{% url 'logout-view' %}">Logout</a></div>
+            {% endif %}
+           
+          </div>
+        </nav>
+      </div>
+    </section>
+  </div>
+<!-- <body class="hero-anime">	
     <div class="navigation-wrap bg-grey2 start-header start-style">
         <div class="container">
             <div class="row">
@@ -88,10 +156,10 @@
                                             <p class='text-white'>Technical Contact</p>
                                         </a>
                                     </div>
-                                </li> -->
+                                </li> 
                                 <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'contact' %}">
-                                        <p class='text-white'>Contact</p>
+                                        <p class='text-white'>Contact</p> -->
                                     </a>
                                 </li>
                             </ul>
@@ -101,7 +169,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     {%block content%}
@@ -119,6 +187,8 @@
 </script>
 
     <script src="../../../static/users/js/index.js"></script>
+    <script src="../../../static/users/js/main.js"></script>
+
 
 
 

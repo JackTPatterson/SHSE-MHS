@@ -15,6 +15,8 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 import json
+from django.contrib.auth import logout
+
 # Create your views here.
 
 def index(request):
@@ -278,3 +280,8 @@ def editInductees(request, pk):
 
 def page_not_found_view(request, exception):
     return render(request, 'users/404.html', status=404)
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('index')

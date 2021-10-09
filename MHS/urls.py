@@ -46,6 +46,7 @@ urlpatterns = [
     path('inductees', views.InducteesList.as_view(), name='inductees'),
     path('inductees/new', views.addInductees, name='newInductees'),
     path('inductees/<int:pk>', views.editInductees, name='editInductees'),
+    path('logout', views.logout_view, name='logout-view')
 
 
 ]
