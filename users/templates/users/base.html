@@ -14,7 +14,7 @@
     <link rel='stylesheet' type='text/css' href='"../../../static/users/css/index.css'>
     <link rel='stylesheet' type='text/css' href="../../../static/users/css/tailwind.css">
     <link rel='stylesheet' type='text/css' href="../../../static/users/css/owl.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
     </link>
@@ -27,210 +27,274 @@
 
 
 </head>
-<div class="" id="content">
 
-    <section data-section-id="1" data-category="navigations" data-component-id="886f4350_02_awz" class="py-8 px-4 lg:px-10 bg-gray-800">
-      <nav class="relative flex justify-between items-center">
-        <a class="text-2xl text-white font-bold" href="#" data-config-id="brand">
+<div class="opacity-0 fixed z-10 inset-0 overflow-y-auto mt-32" id="modal" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+        <!--
+        Modal panel, show/hide based on modal state.
+  
+        Entering: "ease-out duration-300"
+          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          To: "opacity-100 translate-y-0 sm:scale-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100 translate-y-0 sm:scale-100"
+          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      -->
+        <div
+            class="inline-block align-top bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class=" text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                        Your are about to logout
+                    </h3>
+                    <div class="mt-2">
+                        <p class="text-sm text-gray-500">
+                            Are you sure you want to logout of your account?
+                        </p>
+                    </div>
+                </div>
+                <div class="sm:flex sm:items-start">
+
+
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:justify-center">
+                <button type="button" onclick='logout()'
+                    class="mt-3 w-full inline-flex justify-center rounded-md bg-red1 shadow-sm px-4 py-2 text-base font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm text-white">
+                    Logout
+                </button>
+                <button onclick='hideModal()' type="button"
+                    class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="py-8 px-5 lg:px-10 bg-gray-800">
+    <nav class="relative flex justify-between items-center">
+        <a class="text-2xl text-white font-bold" href="{% url 'index' %}" data-config-id="brand">
             <h1 class='text-white text-4xl'>SHSE-MHS</h1>
         </a>
         <div class="lg:hidden">
-          <button class="p-2 navbar-burger">
-            <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
-          </button>
+            <button class="p-2 navbar-burger">
+                <svg class="w-10 h-3" width="39" height="13" viewbox="0 0 39 13" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="39" height="2" rx="1" fill="#C4C4C4"></rect>
+                    <rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect>
+                </svg>
+            </button>
         </div>
-        <div class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-          <ul class="flex items-center text-white space-x-10">
-            <li><a class="text-white font-bold text-lg" href="{% url 'index' %}" data-config-id="link1">Home</a></li>
-            <span>
-              <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-            </span>
-            <li><a class="text-white font-bold text-lg" href="{% url 'forms' %}" data-config-id="link2">Info</a></li>
-            <span>
-              <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-            </span>
-            <li><a class="text-white font-bold text-lg" href="{% url 'announcements' %}" data-config-id="link3">Posts</a></li>
-            <span>
-              <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-            </span>
-            <li><a class="text-white font-bold text-lg" href="{% url 'dates' %}" data-config-id="link4">Dates</a></li>
-            <span>
-                <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-            </span>
-            <li><a class="text-white font-bold text-lg" href="{% url 'signup' %}" data-config-id="link4">Tutoring Signup</a></li>
-            <span>
-                <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-              </span>
-              <li><a class="text-white font-bold text-lg" href="{% url 'contact' %}" data-config-id="link4">Contact</a></li>
-            
-          </ul>
+        <div class="hidden lg:block ml-auto">
+            <ul class="flex items-center space-x-5">
+                <li><a class=" font-bold text-lg text-white" href="{% url 'index' %}" data-config-id="link1">Home</a>
+                </li>
+                <span>
+                    <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle>
+                    </svg>
+                </span>
+                <li><a class="text-white font-bold text-lg" href="{% url 'forms' %}" data-config-id="link2">Info</a>
+                </li>
+                <span>
+                    <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle>
+                    </svg>
+                </span>
+                <li><a class="text-white font-bold text-lg" href="{% url 'announcements' %}"
+                        data-config-id="link3">Posts</a></li>
+                <span>
+                    <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle>
+                    </svg>
+                </span>
+                <li><a class="text-white font-bold text-lg" href="{% url 'dates' %}" data-config-id="link4">Dates</a>
+                </li>
+                <span>
+                    <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle>
+                    </svg>
+                </span>
+                <li><a class="text-white font-bold text-lg" href="{% url 'signup' %}" data-config-id="link4">MS Tutoring
+                        Signup</a></li>
+                <span>
+                    <svg width="5" height="5" viewbox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle>
+                    </svg>
+                </span>
+                <li><a class="text-white font-bold text-lg" href="{% url 'contact' %}"
+                        data-config-id="link4">Contact</a></li>
+
+            </ul>
+        </div> {% if user.is_authenticated %}
+        <div class="hidden lg:block ">
+            <a id='logout-btn'
+                class="cursor-pointer inline-block ml-5 pl-4 pr-3 mt-2 py-2 text-red1 font-bold border bg-transparent hover:bg-white rounded-full"
+                data-config-id="primary-action"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+            </a>
         </div>
-        {% if user.is_authenticated %}
-        <div class="hidden lg:block"><a class="inline-block px-12 py-2 text-white font-bold border hover:border-white rounded-full" href="{% url 'logout-view' %}" data-config-id="primary-action">Logout</a></div>
-      {% endif %}
+        {% endif %}
     </nav>
-      <div class="hidden navbar-menu relative z-50">
+    <div class="hidden navbar-menu relative z-50">
         <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
-        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"><div class="flex items-center mb-8">
-            <a class="mr-auto text-3xl font-bold leading-none" href="#">SHSE-MHS</a>
-            <button class="navbar-close">
-              <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
-          </div>
-          <div>
-            <ul><li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'index' %}">Home</a></li>
-              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'forms' %}">Info</a></li>
-              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'announcements' %}">Posts</a></li>
-              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'dates' %}">Dates</a></li>
-              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'signup' %}">Tutoring Signup</a></li>
-              <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-purple-600 rounded" href="{% url 'contact' %}">Contact</a></li>
-
-
-            </ul></div>
-          <div class="mt-auto">
-              {% if user.is_authenticated %}
-            <div class="pt-6"><a class="block px-4 py-3 mb-3 leading-loose text-md text-center font-semibold leading-none rounded-l-xl rounded-t-xl" href="{% url 'logout-view' %}">Logout</a></div>
-            {% endif %}
-           
-          </div>
-        </nav>
-      </div>
-    </section>
-  </div>
-<!-- <body class="hero-anime">	
-    <div class="navigation-wrap bg-grey2 start-header start-style">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar navbar-expand-md navbar-dark my-2">
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'index' %}" class="navbar-brand">SHSE Math Honor Society <span class='text-blue2'>•</span></a>
-                        {% else %}
-                        <a href="{% url 'index' %}" class="navbar-brand">SHSE Math Honor Society </a>
-                        {% endif %}
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto py-4 py-md-0">
-                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4 ">
-                                    <a class="nav-link" href="{% url 'index' %}">
-                                        <p class='text-white'>Home</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="{% url 'forms' %}">
-                                        <p class='text-white'>Info</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="{% url 'announcements' %}">
-                                        <p class='text-white'>Posts</p>
-                                    </a>
-                                </li>
-                              
-                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="{% url 'dates' %}">
-                                        <p class='text-white'>Dates</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="{% url 'signup' %}">
-                                        <p class='text-white whitespace-nowrap'>Tutoring Sign Up</p>
-                                    </a>
-                                </li>
-                                <!-- <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4 active">
-                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <p class='text-white' onclick='window.location.href="{% url 'contact' %}"'>
-                                            Contact</p>
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="{% url 'contactGeneral' %}">
-                                            <p class='text-white'>General Contact</p>
-                                        </a>
-                                        <a class="dropdown-item" href="{% url 'contactTechnical' %}">
-                                            <p class='text-white'>Technical Contact</p>
-                                        </a>
-                                    </div>
-                                </li> 
-                                <li class="nav-item md:pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="{% url 'contact' %}">
-                                        <p class='text-white'>Contact</p> -->
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </nav>
-                </div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-xs py-8 bg-white overflow-y-auto">
+            <div class="flex items-center justify-between mb-16 pr-6">
+                <a class="text-2xl ml-4 font-bold" href="{% url 'index' %}" data-config-id="brand">
+                    <h1 class='text-black text-4xl'>SHSE-MHS</h1>
+                </a>
+                
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg></button>
+                    
             </div>
-        </div>
-    </div> -->
+            
+            <div>
+                <ul>
+                    <li class="mb-1"><a
+                            class="block   transition pl-4 mb-3 text-sm font-semibold text-gray-400  hover:text-blue2 rounded"
+                            href="{% url 'index' %}">Home</a></li>
+                    <li class="mb-1"><a
+                            class="block   transition pl-4 mb-3 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-blue2 rounded"
+                            href="{% url 'forms' %}">Info</a></li>
+                    <li class="mb-1"><a
+                            class="block transition pl-4 mb-3 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-blue2 rounded"
+                            href="{% url 'announcements' %}">Posts</a></li>
+                    <li class="mb-1"><a
+                            class="block transition pl-4 mb-3 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-blue2 rounded"
+                            href="{% url 'dates' %}">Dates</a></li>
+                    <li class="mb-1"><a
+                            class="block transition pl-4 mb-3 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-blue2 rounded"
+                            href="{% url 'signup' %}">MS Tutoring Signup</a></li>
+                    <li class="mb-1"><a
+                            class="block transition pl-4 mb-3 text-sm font-semibold text-gray-400 hover:bg-purple-50 hover:text-blue2 rounded"
+                            href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mt-auto px-10">
+                {% if user.is_authenticated %}
+                <div class="lg:block"><a id='logout-btn2'
+                        class="transition text-center block px-12 py-2 text-black hover:text-red1 font-bold border border-black hover:border-black rounded-full hover:text-red-600"
+                        href="{% url 'logout-view' %}" data-config-id="primary-action">Logout</a></div>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</section>
 
 
-    {%block content%}
-
-    {% endblock content %}
-
- 
 
 
-    {%block scripts%}
+
+{%block content%}
+
+{% endblock content %}
 
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+
+{%block scripts%}
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src="./script.js"></script>
 </script>
 
-    <script src="../../../static/users/js/index.js"></script>
-    <script src="../../../static/users/js/main.js"></script>
+<script src="../../../static/users/js/index.js"></script>
+<script src="../../../static/users/js/main.js"></script>
 
 
 
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
 
-// You can also pass an optional settings object
-// below listed default settings
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-  
+    // You can also pass an optional settings object
+    // below listed default settings
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: true, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
-});
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
+    $('#modal').hide();
+    $('#logout-btn').click(function () {
+        $('#modal').css({
+            'opacity': 1
+        });
+        $('#modal').fadeIn();
+    })
+
+    $('#logout-btn2').click(function () {
+        $('#modal').css({
+            'opacity': 1
+        });
+        $('#modal').fadeIn();
+    })
+
+    function hideModal() {
+        $('#modal').fadeOut();
+    }
+
+    function logout() {
+        window.location.href = '{% url "logout-view"}';
+    }
 </script>
 
+<style>
+    #logout-btn, #logout-btn2{
+        transition: all .2s;
+    }
+    #logout-btn:hover{
+        transition: all .2s;
+        color: white;
+    }
+    #logout-btn2:hover{
+        transition: all .2s;
+        color: #ff3347;
+    }
+</style>
 
+{%endblock scripts%}
 
-    {%endblock scripts%}
-
-    <style>
-        body {
-            font-family: "Poppins";
-        }
-    </style>
+<style>
+    body {
+        font-family: "Poppins";
+    }
+</style>
 </body>
 
 </html>
