@@ -695,3 +695,19 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	}
   }
 
+
+  @media screen and (min-width: 1024px) {
+    #text-group {
+      text-align: left;
+    }
+
+    #btn-group{
+      float: left;
+    }
+  }
+
+  @media screen and (max-width: 1025px) {
+    #text-group {
+      text-align: center;
+    }
+  }

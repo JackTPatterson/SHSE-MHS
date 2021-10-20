@@ -28,7 +28,7 @@
   <img src='https://vectr.com/tmp/d2jTlDjwu1/d2vC1jejio.svg?width=640&height=640&select=d2vC1jejiopage0'>
 </div> -->
 
-<!-- <section class='xl:max-w-screen-2xl lg:max-w-screen-lg mx-auto'>
+
   
 {% if messages %}
   {% for message in messages %}
@@ -44,283 +44,147 @@
 </div>
   {% endfor %}
   {% endif %}
-  <center>
-    <div class="lg:flex lg:justify-between lg:flex-wrap lg:overflow-hidden md:px-10">
 
-      <div id='main-txt' class="sm:w-2/3 lg:w-1/2 xl:w-1/2 mx-10 sm:mx-0">
-        <div class='lg:mt-72 sm:mt-20 mt-20  text-center' data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-          <h1 class=' xl:text-7xl text-5xl lg:text-left lg:mx-0 ld:mx-10 text-white lg:mt-10 mt-40'><strong>Welcome to the
-              <br><span class='text-blue1'>SHSE Math Honor Society</span></strong></h1>
-        </div>
-      </div>
-
-      <div
-       class="w-1/2 sm:w-full md:w-2/3 lg:w-1/2 xl:w-1/2"  data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-        <img src='../../static/users/images/logo.png' id='main-img'
-          class='transform hover:scale-105 transition duration-500'>
-
-      </div>
-
-    </div>
-  </center>
-  <div class='sub-btn sm:mt-10 md:mt-10 lg:mt-0 pb-20 lg:ml-10' data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-offset="0">
-    <button id='scrollBtn' class='transition bg-blue1 hover:bg-blue2 text-white py-2 pl-8 pr-6 rounded-full'>
-      <div class='flex'>
-        <p class='text-white font-semibold mr-3'>More Info</p>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
-        </svg>
-      </div>
-    </button>
-  </div>
-  </div>
-  </div>
-</section> -->
-
-<section><div class="pt-24 lg:pt-10 xl:pt-20 2xl:pt-32 pb-20 " data-aos='smooth'>
-  <div class="container mx-auto px-4">
-    <div class="flex flex-wrap -mx-4">
-      <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
-        <div class="w-full lg:text-left">
-          <div id='title-group' class="max-w-xl mx-auto lg:mx-0">
-            <h2 class="text-4xl lg:text-6xl text-white font-bold">
-              <span class='leading-snug'>Welcome to the</span>
-              <span class="text-blue2 leading-snug">SHSE Math Honor Society</span>
-            </h2>
-          </div>
-          <div class="max-w-sm mx-auto lg:mx-0">
-            <div><a class="inline-block mb-3 mt-10 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-blue2 hover:bg-blue1  text-white font-semibold rounded-l-xl rounded-xl transition duration-200" href="{% url 'forms' %}">Get Started</a>
-              <a class="inline-block w-full lg:w-auto py-2 px-6 leading-loose text-white hover:text-black font-semibold bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-xl transition duration-200 cursor-pointer hover:bg-white" id='scrollBtn'>Learn More</a></div>
+<section>
+  <div class="pt-24 lg:pt-10 xl:pt-20 2xl:pt-32 pb-20 " data-aos='smooth'>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
+          <div id='text-group' class="w-full lg:text-left">
+            <div id='title-group' class="max-w-xl mx-auto lg:mx-0">
+              <h2 class="text-4xl sm:text-5xl lg:text-6xl text-white font-bold">
+                <span class='leading-snug'>Welcome to the</span>
+                <span class="text-blue2 leading-snug">SHSE Math Honor Society</span>
+              </h2>
+            </div>
+            <div class="max-w-sm mx-auto lg:mx-0" id='btn-group'> 
+              <div><a
+                  class="inline-block mb-3 mt-10 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-blue2 hover:bg-blue1  text-white font-semibold rounded-l-xl rounded-xl transition duration-200"
+                  href="{% url 'forms' %}">Get Started</a>
+                <a id='lrn-btn' class="inline-block w-full lg:w-auto py-2 px-6 leading-loose text-white hover:text-black hover:bg-white font-semibold bg-gray-900 border-2 border-gray-700 hover:border-gray-600 rounded-xl transition duration-200 cursor-pointer hover:bg-white"
+                  id='scrollBtn'><div class='flex'>Learn More
+               </div>
+                
+                </a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="w-full lg:w-1/2 px-4 flex items-center justify-center">
-        <div class="relative" style="z-index: 0;" id='main-img-1'>
-          <img class="w-full max-w-lg object-cover rounded-3xl md:rounded-br-none md:h-128" src="../../static/users/images/logo.png" alt="">
-          <img class="hidden md:block absolute" style="top:-2rem; right: 3rem; z-index: -1;" src="../../static/users/atis-assets/elements/blue-up.svg" alt="">
-          <img class="hidden md:block absolute" style="bottom:-2rem; right: -2rem; z-index: -1;" src="../../static/users/atis-assets/elements/wing-purple-down.svg" alt="">
-          <img class="hidden md:block absolute" style="top:3rem; right: -3rem; z-index: -1;" src="../../static/users/atis-assets/elements/bullets-dark-right.svg" alt="">
-          <img class="hidden md:block absolute" style="bottom:2.5rem; left: -4.5rem; z-index: -1;" src="../../static/users/atis-assets/elements/bullets-yellow-left.svg" alt=""></div>
+        <div class="w-full lg:w-1/2 px-4 flex items-center justify-center">
+          <div class="relative" style="z-index: 0;" id='main-img-1'>
+            <img class="w-full max-w-lg object-cover rounded-3xl md:rounded-br-none md:h-128"
+              src="../../static/users/images/logo.png" alt="">
+            <img class=" md:block absolute" style="top:-2rem; right: 3rem; z-index: -1;"
+              src="../../static/users/atis-assets/elements/blue-up.svg" alt="">
+            <img class=" md:block absolute" style="bottom:-2rem; right: -2rem; z-index: -1;"
+              src="../../static/users/atis-assets/elements/wing-purple-down.svg" alt="">
+            <img class=" md:block absolute" style="top:3rem; right: -3rem; z-index: -1;"
+              src="../../static/users/atis-assets/elements/bullets-dark-right.svg" alt="">
+            <img class=" md:block absolute" style="bottom:2.5rem; left: -4.5rem; z-index: -1;"
+              src="../../static/users/atis-assets/elements/bullets-yellow-left.svg" alt=""></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
 </section>
-
-
 <section id='about' data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-<div class='mt-60'>
-  <!-- Section 1 -->
-  <section class="w-full py-12 lg:py-24">
-    <div class="max-w-6xl px-12 mx-auto text-center">
+  <div class='mt-60'>
+    <section class="w-full py-12 lg:py-24">
+      <div class="max-w-6xl px-12 mx-auto text-center">
+        <div class="space-y-12 md:text-center">
+          <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
+            <h2 class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">About Us</h2>
+            <p class="text-xl text-white">We are Smithtown East Math Honor Society,
+              the largest club in High School East. We help the school and community through activities and events
+              such as tutoring at the elementary, middle and high school levels.</p>
+            {% if user.is_authenticated %}
+            <button id='forms-btn' class='transition bg-blue1 hover:bg-blue mx-2 text-white py-2 px-4 rounded-xl mt-2'
+              onclick="window.location.href='{% url 'newOfficer' %}'">
+              <p>Add Officer</p>
+            </button>
+            {% endif %}
+          </div>
+        </div>
+        <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2">
+          {% for o in officers %}
+          {% if o.isBig %}
+          <div class='transform hover:scale-105 transition duration-500'>
+            <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
+              class="rounded-lg shadow-sm bg-grey2 transition  h-36 flex align-center justify-center">
+              <div class="flex flex-col items-center justify-center p-10">
+                <h2 class="text-lg font-medium mt-3">{{ o.name }}</h2>
+                <p class="font-medium text-blue-500">{{ o.position }}</p>
+                <div class='flex'>
+                  {% if user.is_authenticated %}
+                  <button id='forms-btn'
+                    class='transition bg-blue1 hover:bg-blue mx-2 text-white py-2 px-4 rounded-xl mt-2'
+                    onclick="window.location.href='{% url 'editOfficer' o.pk %}'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                  </button>
+                  <button id='forms-btn' class='transition bg-red1 mx-2 text-white py-2 px-4 rounded-xl mt-2'
+                    onclick="window.location.href='{% url 'deleteOfficer' o.pk %}'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </button>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+          {% for o in officers %}
+          {% if not o.isBig %}
+          <div class='transform hover:scale-105 transition duration-500'>
+            <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
+              class="rounded-lg shadow-sm bg-grey2 transition  h-36 flex align-center justify-center">
 
-      <div class="space-y-12 md:text-center">
-        <div class="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
-          <h2 class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white">About Us</h2>
-          <p class="text-xl text-white">We are Smithtown East Math Honor Society,
-            the largest club in High School East. We help the school and community through activities and events
-            such as tutoring at the elementary, middle and high school levels.</p>
+              <div class="flex flex-col items-center justify-center p-10">
+                <h2 class="text-lg font-medium mt-3">{{ o.name }}</h2>
+                <p class="font-medium text-blue-500">{{ o.position }}</p>
+                <div class='flex'>
+                  {% if user.is_authenticated %}
+                  <button id='forms-btn'
+                    class='transition bg-blue1 hover:bg-blue mx-2 text-white py-2 px-4 rounded-xl mt-2'
+                    onclick="window.location.href='{% url 'editOfficer' o.pk %}'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                  </button>
+                  <button id='forms-btn' class='transition bg-red1 mx-2 text-white py-2 px-4 rounded-xl mt-2'
+                    onclick="window.location.href='{% url 'deleteOfficer' o.pk %}'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </button>
+
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
-
-      <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 mb-10 mt-1">
-
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium mt-3">Mrs. Boccio-McComb</h2>
-              <p class="font-medium text-blue-500">Mentor</p>
-            </div>
-          </div>
-
-        </div>
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth2" data-aos-easing="ease-in-out-cubic"
-            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium mt-3">Mrs. Schoepflin</h2>
-              <p class="font-medium text-blue-500">Mentor</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2  mb-10">
-
-        <div class='transform hover:scale-105 transition duration-500 '>
-          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Srivaths Ravva</h2>
-              <p class="font-medium text-blue-500">President</p>
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Samantha Micozzi</h2>
-              <p class="font-medium text-blue-500">President</p>
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="text-white grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Sarah Tufo</h2>
-              <p class="font-medium text-blue-500">Vice President</p>
-
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth" data-aos-easing="ease-in-out-cubic" data-aos-delay="50"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Mackenzie Barrett</h2>
-              <p class="font-medium text-blue-500">Treasurer/Fundraising</p>
-
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- TODO: Hover scaling does not work on this one -->
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth3" data-aos-easing="ease-in-out-cubic" data-aos-delay="100"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Sofia Ragona</h2>
-              <p class="font-medium text-blue-500">Secretary of Attendance</p>
-
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth2" data-aos-easing="ease-in-out-cubic" data-aos-delay="50"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Aman Mistry</h2>
-              <p class="font-medium text-blue-500">Secretary of Outreach</p>
-
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth3" data-aos-easing="ease-in-out-cubic" data-aos-delay="100"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Nikhil Mehta</h2>
-              <p class="font-medium text-blue-500">Elementary/STEAM Coordinator</p>
-
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center">
-              <h2 class="text-lg font-medium mt-2">James Bryceland</h2>
-              <p class="font-medium text-blue-500">Elementary/STEAM Coordinator</p>
-
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Krishna Palempalli</h2>
-              <p class="font-medium text-blue-500">Middle School Tutoring</p>
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth4" data-aos-easing="ease-in-out-cubic" data-aos-delay="150"
-            class=" rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Justin Hippler</h2>
-              <p class="font-medium text-blue-500">Middle School Tutoring Coordinators</p>
-
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class='transform hover:scale-105 transition duration-500'>
-          <div data-aos="smooth5" data-aos-easing="ease-in-out-cubic" data-aos-delay="200"
-            class="rounded-lg shadow-sm bg-grey2 transition hover:bg-blue2 h-36 flex align-center justify-center">
-
-            <div class="flex flex-col items-center justify-center p-10">
-              <h2 class="text-lg font-medium">Jonathan Chung</h2>
-              <p class="font-medium text-blue-500">Middle School Tutoring Coordinators</p>
-
-              </p>
-            </div>
-          </div>
-
-
-        </div>
-
-
-
-      </div>
-
-    </div>
-  </section>
-</div>
-</div>
-</center>
-
-
-
-</div>
+    </section>
+  </div>
+  </div>
+  </center>
+  </div>
 </section>
-
-
-
-
 
 <!-- <div class=" px-4 xl:max-w-screen-2xl lg:max-w-screen-lg mx-auto">
 <div class="pt-10 md:pt-40">
@@ -373,83 +237,82 @@
 </div>
 </div> -->
 
-
-
 <div class="mx-auto py-12 mt-40" data-aos="smooth" data-aos-easing="ease-in-out-cubic">
-<div class="lg:w-11/12 mx-auto flex justify-center">
-  <div id='expand-div'
-    class="w-full lg:mx-4 bg-gradient-to-r from-blue1 to-blue2 md:py-8 md:px-8 py-4 xl:px-12 xl:py-16 rounded-xl">
-    <div>
-      <div class="flex flex-wrap items-center md:flex-row flex-col-reverse">
-        <div
-          class="md:w-2/3 w-full md:pb-0 md:pr-6 flex-col md:block flex items-center justify-center md:pt-0 pt-4">
-          <div>
-            <h1 role="heading" id='ind-head'
-              class="text-xl md:text-2xl lg:text-4xl xl:text-5xl lg:w-10/12 text-white font-black leading-tight md:mx-0 mx-6">
-              Here are the new MHS inductees for {{induct}}</h1>
-          </div>
-          <div class=''>
-            
-            <button onclick="window.location.href='{% url 'inductees' %}'"
-              class="md:mr-3 mr-5 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 bg-white font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 "><p>View
-              {{induct}} Inductees</p></button>
+  <div class="lg:w-11/12 mx-auto flex justify-center">
+    <div id='expand-div'
+      class="w-full lg:mx-4 bg-gradient-to-r from-blue1 to-blue2 md:py-8 md:px-8 py-4 xl:px-12 xl:py-16 rounded-xl">
+      <div>
+        <div class="flex flex-wrap items-center md:flex-row flex-col-reverse">
+          <div class="md:w-2/3 w-full md:pb-0 md:pr-6 flex-col md:block flex items-center justify-center md:pt-0 pt-4">
+            <div>
+              <h1 role="heading" id='ind-head'
+                class="text-xl md:text-2xl lg:text-4xl xl:text-5xl lg:w-10/12 text-white font-black leading-tight md:mx-0 mx-6">
+                Here are the new MHS inductees for {{induct}}</h1>
+            </div>
+            <div class=''>
+
+              <button onclick="window.location.href='{% url 'inductees' %}'"
+                class="md:mr-3 mr-5 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 bg-white font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 ">
+                <p>View
+                  {{induct}} Inductees</p>
+              </button>
 
               {% if user.is_authenticated %}
-              <button onclick="window.location.href='{% url 'newInductees' %}'"
-              class="md:mr-3 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 bg-transparent">
-              <p class='text-white'>+</p>
-            </button>
-            {% endif %}
+              <button  onclick="window.location.href='{% url 'newInductees' %}'"
+                class="md:mr-3 lg:mt-12 py-3 lg:py-4 px-4 lg:px-6 font-bold rounded-lg text-sm lg:text-lg xl:text-xl border-white border-2 ring-opacity-0 bg-transparent">
+                <p  class='text-white'>+</p>
+              </button>
+              {% endif %}
+            </div>
           </div>
-        </div>
-        <div class="md:w-1/3 w-full">
-          <div class="flex md:flex-col items-center justify-center">
-            <div class="flex items-center" aria-label="group of images" role="img">
-              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
-                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+          <div class="md:w-1/3 w-full">
+            <div class="flex md:flex-col items-center justify-center">
+              <div class="flex items-center" aria-label="group of images" role="img">
+                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
+                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+                </div>
+                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
+                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
+                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+                </div>
               </div>
-              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
-                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
-                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+              <div class="flex items-center md:mt-4">
+                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
+                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+                </div>
+                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
+                    alt="avatar image" data-aos="grow" data-aos-delay="200ms" />
+                </div>
+                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
+                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
+                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+                </div>
               </div>
-            </div>
-            <div class="flex items-center md:mt-4">
-              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
-                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+              <div class="flex items-center md:mt-4">
+                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
+                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
+                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+                </div>
+                <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
+                  <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
+                    alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
+                </div>
+
               </div>
-              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png"
-                  alt="avatar image" data-aos="grow" data-aos-delay="200ms" />
-              </div>
-              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
-                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
-                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-              </div>
-            </div>
-            <div class="flex items-center md:mt-4">
-              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full md:mr-3">
-                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png"
-                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-              </div>
-              <div class="xl:w-20 lg:h-14 lg:w-14 w-10 h-10 xl:h-20 rounded-full">
-                <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png"
-                  alt="avatar image" data-aos="grow2" data-aos-easing="ease-in-out-cubic" data-aos-delay="100ms" />
-              </div>
-              
             </div>
           </div>
         </div>
       </div>
+
+
+
     </div>
 
-   
-  
-</div>
 
-
-</div>
+  </div>
 </div>
 
 
@@ -459,24 +322,34 @@
 
   }
 
-  
+  @media screen and (min-width: 1024px) {
+    #text-group {
+      text-align: left;
+    }
 
+    #btn-group{
+      float: left;
+    }
+  }
+
+  @media screen and (max-width: 1025px) {
+    #text-group {
+      text-align: center;
+    }
+
+ 
+  }
+  #lrn-btn:hover{
+    color:black !important;
+    background-color: white;
+  }
 </style>
 <script src="../../static/users/js/parallax.min.js"></script>
 
 <script>
   new vanillaJsuParallax({
-      items: document.querySelectorAll('#main-img-1'),
+    items: document.querySelectorAll('#main-img-1'),
   });
-
-
-
-     
-  
-   
-  
-
-
 </script>
 
 <!-- {% if messages %}
@@ -488,7 +361,6 @@
                      }, 4000)
 </script>
 {% endif %} -->
-
 
 {% include "users/footer.html" %}
 

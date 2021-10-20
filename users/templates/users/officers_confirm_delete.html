@@ -1,0 +1,29 @@
+{% extends 'users/base.html' %}
+
+{%block content%}
+
+
+<h2 class="relative text-4xl font-extrabold tracking-normal sm:text-5xl text-white text-center">Confirm</h2>
+<center>
+    <p class="text-xl text-white mt-3">Are you sure you would like to delete this
+        officer position</p>
+</center>
+
+<form method='POST'>
+    {% csrf_token %}
+    <center><button type='submit' style='background: red;' id='forms-btn'
+            class='ml-5 mt-10 transition bg-red-500 hover:bg-blue2 text-white py-2 px-4 rounded-lg'>
+            <p class='text-white font-semibold'>Delete</p>
+        </button>
+    </center>
+</form>
+
+
+<style>
+    body {
+        background-color: #0f0f11;
+    }
+</style>
+
+
+{%endblock content%}

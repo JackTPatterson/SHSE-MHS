@@ -72,3 +72,17 @@ class Inductees(models.Model):
          verbose_name = "List of Inductees"
          verbose_name_plural = "Inductees"
 
+class Officers(models.Model):
+    
+    
+    name = models.CharField(verbose_name="Name", max_length=254, blank=True)
+    position = models.TextField(verbose_name='Position', max_length=254)
+    isBig = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+         verbose_name = "List of Officers"
+         verbose_name_plural = "Officers"
+

@@ -1,8 +1,8 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls.base import reverse_lazy
-from .forms import AnnouncementEditForm, FeedbackForm, AnnouncementForm, DatesForm, DatesEditForm, InducteesForm
-from .models import Dates, Feedback, Announcement, Inductees
+from .forms import AnnouncementEditForm, FeedbackForm, AnnouncementForm, DatesForm, DatesEditForm, InducteesForm, OfficerForm
+from .models import Dates, Feedback, Announcement, Inductees, Officers
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as dj_login, logout
 from django.contrib.auth.decorators import login_required
@@ -22,6 +22,7 @@ from django.contrib.auth import logout
 def index(request):
 
     context = {
+        'officers': Officers.objects.all(),
         'induct': Inductees.objects.latest('year')
     }
     return render(request, "users/index.html", context=context)
@@ -285,3 +286,43 @@ def page_not_found_view(request, exception):
 def logout_view(request):
     logout(request)
     return redirect('index')
+
+@login_required
+def addOfficer(request):
+    form = OfficerForm(request.POST)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Officer Added')
+            return HttpResponseRedirect(reverse_lazy('index'))
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'users/officers-add.html', context)
+
+@login_required
+def editOfficer(request, id):
+    instance = get_object_or_404(Officers, id=id)
+    
+    form = OfficerForm(request.POST or None, instance=instance)
+    if request.method == "POST":
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Officer Changed')
+                return HttpResponseRedirect(reverse_lazy('index'))
+    context = {
+        'form': form,
+        'instance': Officers.objects.get(id=id).isBig
+    }
+    return render(request, 'users/officers-edit.html', context)
+
+class deleteOfficer(DeleteView):
+
+
+    
+    model = Officers
+
+    success_url ="/"
+
+    
